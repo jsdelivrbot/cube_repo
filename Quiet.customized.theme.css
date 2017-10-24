@@ -1,22 +1,4 @@
-//META{"name":"Quiet","description":"Dark and Quiet. Easy on the eyes.","author":"Omniscient","version":"0.0"}*//
-
-/* IMPORT CSS FROM GITHUB */
 @import url("https://rawgit.com/0mniscient/Discord-Themes/master/css/Quiet.css");
-/*
----------------------------------------------------------------------------------------------------------------------------------------------
-IMPORTANT: CHANGE DISCORDS THEME TO DARK THEME IN APPEARANCE SETTINGS FOR THIS THEME TO WORK!
----------------------------------------------------------------------------------------------------------------------------------------------
-===== CUSTOMIZABLE COLORS =====
-*/
-:root { 
- --main-color: #0063B1;
- --hover-color: #003F70;
- }
-/*
----------------------------------------------------------------------------------------------------------------------------------------------
-TROUBLESHOOTING: IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
----------------------------------------------------------------------------------------------------------------------------------------------
-*/
 
 
 /*CSS TO REMOVE BOTTOM RIGHT NAME AND VERSION TEXT*/
@@ -26,7 +8,7 @@ TROUBLESHOOTING: IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
 	--theme-letter: "";
 }
 
-/*reoves the remaining 'v'*/
+/*removes the remaining 'v'*/
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before{content: ""!important;}
 
 .need-help-modal .header h1::after{content:;color:#fff;font-weight:700;font-size:0%;z-index:11;position:absolute;width:0%;left: 0px;margin-left: -45px;top: 16px;font-family:Satisfy;text-shadow:1px 1px 1px rgba(0, 0, 0, 0);}
