@@ -1,0 +1,283 @@
+//META{"name":"Quiet","description":"Dark and Quiet. Easy on the eyes.","author":"Omniscient","version":"0.0"}*//
+
+/* IMPORT CSS FROM GITHUB */
+@import url("https://rawgit.com/0mniscient/Discord-Themes/master/css/Quiet.css");
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------
+IMPORTANT: CHANGE DISCORDS THEME TO DARK THEME IN APPEARANCE SETTINGS FOR THIS THEME TO WORK!
+---------------------------------------------------------------------------------------------------------------------------------------------
+===== CUSTOMIZABLE COLORS =====
+*/
+:root { 
+ --main-color: #0063B1;
+ --hover-color: #003F70;
+ }
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------
+TROUBLESHOOTING: IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
+---------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+/*CSS TO REMOVE BOTTOM RIGHT NAME AND VERSION TEXT*/
+:root {
+	--version-content: "";
+	--theme-name: "";
+	--theme-letter: "";
+}
+
+/*reoves the remaining 'v'*/
+.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before{content: ""!important;}
+
+.need-help-modal .header h1::after{content:;color:#fff;font-weight:700;font-size:0%;z-index:11;position:absolute;width:0%;left: 0px;margin-left: -45px;top: 16px;font-family:Satisfy;text-shadow:1px 1px 1px rgba(0, 0, 0, 0);}
+
+#bd-settingspane-container .content-column.default .ui-form-title.h2::after{content: ""!important;}
+
+body:before{content:"";z-index:1000000000000000000000000;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:5px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 0s ease;animation:version 0s ease;-webkit-animation-delay:0s;animation-delay:0s;}
+
+.channel-members::after {content: var(--theme-name)" v"var(--version-content);font-family: "Satisfy";text-align: center;background: #19191B;color: #2e2e30;font-weight: 700;font-size: 0%;width: 100%;height: 70px;bottom: 0px;position: absolute;line-height: 75px;border-top: 2px solid #212121;left: -2px;z-index: 1;border-radius: 0px !important;padding-right: 30px;}
+
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------
+CUSTOM CSS FOR CATEGORIES
+---------------------------------------------------------------------------------------------------------------------------------------------
+*/
+div[class*=wrapperDefault-] > div[class*=nameCollapsed-],
+div[class*=wrapperDefault-] > div[class*=nameDefault-],
+div[class*=wrapperDefault-] > div[class*=nameHovered-],
+div[class*=wrapperDefault-] > div[class*=nameHoveredCollapsed-],
+div[class*=wrapperDefault-] > div[class*=nameMuted-],
+div[class*=wrapperDefault-] > div[class*=nameUnread-],
+div[class*=wrapperCollapsed-] > div[class*=nameCollapsed-],
+div[class*=wrapperCollapsed-] > div[class*=nameDefault-],
+div[class*=wrapperCollapsed-] > div[class*=nameHovered-],
+div[class*=wrapperCollapsed-] > div[class*=nameHoveredCollapsed-],
+div[class*=wrapperCollapsed-] > div[class*=nameMuted-],
+div[class*=wrapperCollapsed-] > div[class*=nameUnread-],
+div[class*=wrapperHovered-] > div[class*=nameCollapsed-],
+div[class*=wrapperHovered-] > div[class*=nameDefault-],
+div[class*=wrapperHovered-] > div[class*=nameHovered-],
+div[class*=wrapperHovered-] > div[class*=nameHoveredCollapsed-],
+div[class*=wrapperHovered-] > div[class*=nameMuted-],
+div[class*=wrapperHovered-] > div[class*=nameUnread-],
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameCollapsed-],
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameDefault-],
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHovered-],
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHoveredCollapsed-],
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameMuted-],
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameUnread-] {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  opacity: 0.3;
+  transition: .2s opacity ease-in-out;
+  transform:translate(0px, 4px)
+}
+div[class*=container-] > div[class*=containerDefault-]:first-child {
+  padding: 1 5px;
+}
+div[class*=wrapperDefault-],
+div[class*=wrapperHovered-],
+div[class*=wrapperDefault-],
+div[class*=wrapperHoveredCollapsed-] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div[class*=wrapperDefault-] > div[class*=nameCollapsed-]:hover,
+div[class*=wrapperDefault-] > div[class*=nameDefault-]:hover,
+div[class*=wrapperDefault-] > div[class*=nameHovered-]:hover,
+div[class*=wrapperDefault-] > div[class*=nameHoveredCollapsed-]:hover,
+div[class*=wrapperDefault-] > div[class*=nameMuted-]:hover,
+div[class*=wrapperDefault-] > div[class*=nameUnread-]:hover,
+div[class*=wrapperCollapsed-] > div[class*=nameCollapsed-]:hover,
+div[class*=wrapperCollapsed-] > div[class*=nameDefault-]:hover,
+div[class*=wrapperCollapsed-] > div[class*=nameHovered-]:hover,
+div[class*=wrapperCollapsed-] > div[class*=nameHoveredCollapsed-]:hover,
+div[class*=wrapperCollapsed-] > div[class*=nameMuted-]:hover,
+div[class*=wrapperCollapsed-] > div[class*=nameUnread-]:hover,
+div[class*=wrapperHovered-] > div[class*=nameCollapsed-]:hover,
+div[class*=wrapperHovered-] > div[class*=nameDefault-]:hover,
+div[class*=wrapperHovered-] > div[class*=nameHovered-]:hover,
+div[class*=wrapperHovered-] > div[class*=nameHoveredCollapsed-]:hover,
+div[class*=wrapperHovered-] > div[class*=nameMuted-]:hover,
+div[class*=wrapperHovered-] > div[class*=nameUnread-]:hover,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameCollapsed-]:hover,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameDefault-]:hover,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHovered-]:hover,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHoveredCollapsed-]:hover,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameMuted-]:hover,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameUnread-]:hover {
+  opacity: 0.8;
+}
+div[class*=wrapperDefault-] > div[class*=nameDefault-]:after,
+div[class*=wrapperDefault-] > div[class*=nameDefault-]:before,
+div[class*=wrapperDefault-] > div[class*=nameHovered-]:after,
+div[class*=wrapperDefault-] > div[class*=nameHovered-]:before,
+div[class*=wrapperDefault-] > div[class*=nameCollapsed-]:after,
+div[class*=wrapperDefault-] > div[class*=nameCollapsed-]:before,
+div[class*=wrapperDefault-] > div[class*=nameHoveredCollapsed-]:after,
+div[class*=wrapperDefault-] > div[class*=nameHoveredCollapsed-]:before,
+div[class*=wrapperCollapsed-] > div[class*=nameDefault-]:after,
+div[class*=wrapperCollapsed-] > div[class*=nameDefault-]:before,
+div[class*=wrapperCollapsed-] > div[class*=nameHovered-]:after,
+div[class*=wrapperCollapsed-] > div[class*=nameHovered-]:before,
+div[class*=wrapperCollapsed-] > div[class*=nameCollapsed-]:after,
+div[class*=wrapperCollapsed-] > div[class*=nameCollapsed-]:before,
+div[class*=wrapperCollapsed-] > div[class*=nameHoveredCollapsed-]:after,
+div[class*=wrapperCollapsed-] > div[class*=nameHoveredCollapsed-]:before,
+div[class*=wrapperHovered-] > div[class*=nameDefault-]:after,
+div[class*=wrapperHovered-] > div[class*=nameDefault-]:before,
+div[class*=wrapperHovered-] > div[class*=nameHovered-]:after,
+div[class*=wrapperHovered-] > div[class*=nameHovered-]:before,
+div[class*=wrapperHovered-] > div[class*=nameCollapsed-]:after,
+div[class*=wrapperHovered-] > div[class*=nameCollapsed-]:before,
+div[class*=wrapperHovered-] > div[class*=nameHoveredCollapsed-]:after,
+div[class*=wrapperHovered-] > div[class*=nameHoveredCollapsed-]:before,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameDefault-]:after,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameDefault-]:before,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHovered-]:after,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHovered-]:before,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameCollapsed-]:after,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameCollapsed-]:before,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHoveredCollapsed-]:after,
+div[class*=wrapperHoveredCollapsed-] > div[class*=nameHoveredCollapsed-]:before {
+  content: "";
+  width: 100%;
+  vertical-align: middle;
+  height: 2px;
+  background: #eee;
+  display: inline-block;
+  margin: 0 5px;
+  transform:translate(0px, 0px);
+}
+
+
+/*moves the + next to categories 4px down to match the name*/
+.horizontal-2BEEBe>.flex-lFgbSz:last-child, .horizontal-2BEEBe>.flexChild-1KGW5q:last-child{
+    transform:translate(0px, 4px);
+}
+
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------
+END CUSTOM CSS FOR CATEGORIES
+---------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+/*voice channel glow imported from clearvision*/
+.channels-wrap [class*="scroller-"] [class*="Voice"] + div [class*="user"] [class*="avatar"]{border-color:transparent!important;box-shadow:none!important;z-index:10}
+.channels-wrap [class*="scroller-"] [class*="Voice"] + div [class*="user"] [class*="avatar"]::before{content:"";position:absolute;top:1px;left:0;bottom:1px;width:4px;background:var(--main-color);opacity:0;pointer-events:none;-webkit-transition:all .1s ease-in-out;transition:all .1s ease-in-out}.channels-wrap [class*="scroller-"] [class*="Voice"] + div [class*="user"] [class*="avatarSpeaking"]::before{opacity:1}.channels-wrap [class*="scroller-"] [class*="Voice"] + div [class*="user"] [class*="avatar"]::after{content:"";position:absolute;top:1px;left:1px;bottom:1px;right:1px;background:linear-gradient(to right,var(--main-color) 0%,transparent 35%);border-left:2px solid var(--main-color);opacity:0;pointer-events:none;-webkit-transition:all .1s ease-in-out;transition:all .1s ease-in-out;z-index:-1}.channels-wrap [class*="scroller-"] [class*="Voice"] + div [class*="user"] [class*="avatarSpeaking"]::after{opacity:.5}.channels-wrap [class*="scroller-"] [class*="Voice"] + div [class*="user"] [class*="name"]{-webkit-transition:all .15s ease-in-out;transition:all .15s ease-in-out}
+
+
+/*voice channel user icons*/
+.avatarContainer-303pFz{
+    margin-right:0px;
+}
+
+/*fixes weird creation date margin adjustment*/
+.creation-date-wrapper{margin-left:0px;}
+
+
+
+
+/*Quiet Title Bar Revert*/
+.win-buttons.win-buttons-light .win-minimize{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xOSAxOXYtMkg3djJoMTJ6Ii8+CiAgICA8cGF0aCBkPSJNMSAyNWgyNFYxSDF2MjR6Ii8+CiAgPC9nPgo8L3N2Zz4=) !important;background-color:transparent !important;border-radius:0px !important;}
+
+.win-buttons.win-buttons-light .win-maximize{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0xIDFoMjR2MjRIMVYxeiIvPgogICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTTggMTNINnY3aDd2LTJIOHYtNXptLTIgMGgyVjhoNVY2SDZ2N3ptNyA1djJoN3YtN2gtMnY1aC01em0wLTEydjJoNXY1aDJWNmgtN3oiLz4KICA8L2c+Cjwvc3ZnPg==) !important;background-color:transparent !important;border-radius:0px !important;}
+
+.win-buttons.win-buttons-light .win-close{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0xIDFoMjR2MjRIMVYxeiIvPgogICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTTIwIDcuNDFMMTguNTkgNiAxMyAxMS41OSA3LjQxIDYgNiA3LjQxIDExLjU5IDEzIDYgMTguNTkgNy40MSAyMCAxMyAxNC40MSAxOC41OSAyMCAyMCAxOC41OSAxNC40MSAxMyAyMCA3LjQxeiIvPgogIDwvZz4KPC9zdmc+) !important;background-color:transparent !important;border-radius:0px !important;}
+
+
+/*bottom left corner profile box*/
+.container-iksrDt{height: 71px;background: #19191b;border-top: 2px solid #212121;width: calc(100% - -36px);padding: 0 23px;position: relative;z-index: 10;color: #fff;border-radius: 0px !important;margin-left: -78px;margin-bottom: -1px;}
+
+
+/*server add button adjustments*/
+.guilds-wrapper .guilds-add{border: 0px solid transparent;position: fixed !important;bottom: 72px;width: 76px !important;border-radius: 0px;left: 0px;height: 3px !important;line-height: 1px;font-size: 0px !important;transition: .1s all linear;}
+
+.guilds-add:hover{transform:scale(1.0);box-shadow:0 0px 76px 0px var(--hover-color);}
+
+
+/*removes capitalization of channel names*/
+.theme-dark .chat .title-wrap .channel-name{font-size:16px !important;text-transform:none !important;}
+
+
+/*read all messages button customization*/
+#RANbutton-frame{margin-bottom:0px !important;}
+
+#RANbutton-frame .guild-inner{width:76px !important;height:20px !important;border-radius:0% !important;margin-top:12px !important;margin-left:-13px !important;transition:.2s linear all;background-color:#131313 !important;}
+
+#RANbutton-frame .guild-inner:hover{border-radius:0px !important;background-color:var(--main-color) !important;color: rgba(255, 255, 255, 1.0) !important;}
+
+#RANbutton{line-height:20px !important;margin-left:-51px !important;margin-right:-76px !important;text-transform: uppercase;color: rgba(255, 255, 255, 0.4);}
+
+#RANbutton:hover{color: rgba(255, 255, 255, 1.0) !important;}
+
+
+/*I have no idea what this is for*/
+form .bf-toolbar{position:absolute !important;transform:translate(-4px, -60px) !important;z-index:5;margin-left: 50px;}
+
+
+/*removes badge on the messages button above guilds*/
+.app .guilds>div.guild:first-child .badge{margin: 0px 0px 0px 0px !important;padding: 50px 0px 0px 0px;border-radius: 0px !important;background-color: #19191b;border-bottom: 2px solid var(--main-color);transition: .2s background-color linear;color: rgba(0,0,0,0);}
+
+
+/*moves 'typing' ellipsis up to be aligned properly*/
+.typing .ellipsis{margin-top:-5px;transform:translate(0px, -1.5px);}
+
+
+.guild-channels{background-color:#131313 !important;}
+
+.guild-channels ul .channel-text.unread:not(.selected):not(.channel-muted):before{left:-15px;}
+
+.guild-header header{background-color:#131313 !important;}
+
+/*.links,*/
+.help-container{display:none;}
+
+/* Server list area */
+.guilds-wrapper{background:#121213;}
+
+/* Channels list area */
+.channels-wrap{background:#131313 !important}
+
+/* Chat area */
+.content .flex-spacer{background:#131313}
+
+/* User list area */
+.channel-members{background:#191919 !important}
+
+div.message-group{background-color:#131313;}
+
+
+.guilds li .guild-inner{background:#131313 !important;}
+
+.guilds-separator:after{background:#131313;}
+
+
+.markdown-modal .scroller-wrap .scroller{background:#131313;color:#bdbdbd;}
+
+.guild-settings-modal-members{background-color:#131313 !important;}
+
+/*scrollbar color adjustments*/
+.scrollerThemed-19vinI.themeLight-1WK0Av.scrollerTrack-3hhmU0>.scroller-fzNley::-webkit-scrollbar-track, .theme-dark .scrollerThemed-19vinI.themeLight-1WK0Av.scrollerTrack-3hhmU0>.scroller-fzNley::-webkit-scrollbar-track, .theme-light .scrollerWrap-2uBjct.scrollerTrack-3hhmU0>.scroller-fzNley::-webkit-scrollbar-track{background-color: #131313;}
+
+
+.ui-standard-sidebar-view .sidebar-region,.ui-standard-sidebar-view .sidebar-region .scrollbar{background:#131313 !important;}
+
+.ui-standard-sidebar-view .content-region,.ui-standard-sidebar-view .content-region .scrollbar{background:#131313 !important;}
+
+
+.scroller-wrap .scroller.messages:hover::-webkit-scrollbar-track-piece{border: 3px solid rgb(19, 19, 19) !important;background-color: #131313 !important;}
+
+
+/*removes Mr. Robot's obnoxious animated avatar*/
+.message-group .avatar-large[style*="172218388880293888"] {background-image:url(https://i.imgur.com/KUFVy78.png) !important;}
+
+.message-group:hover .avatar-large[style*="172218388880293888"]{background-image:url(https://i.imgur.com/KUFVy78.png) !important;}
+
+*[style*="172218388880293888"] {background-image:url(https://i.imgur.com/KUFVy78.png) !important;}
