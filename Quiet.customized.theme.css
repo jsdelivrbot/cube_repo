@@ -1,30 +1,89 @@
 @import url("https://rawgit.com/0mniscient/Discord-Themes/master/css/Quiet.css");
 
+/* IMPORT CSS FROM GITHUB */
+@import url("https://rawgit.com/0mniscient/Discord-Themes/master/css/Quiet.css");
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------
+IMPORTANT: CHANGE DISCORDS THEME TO DARK THEME IN APPEARANCE SETTINGS FOR THIS THEME TO WORK!
+---------------------------------------------------------------------------------------------------------------------------------------------
+===== CUSTOMIZABLE COLORS =====
+*/
+:root { 
+ --main-color: #0063B1;
+ --hover-color: #0063B1;
+ }
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------
+TROUBLESHOOTING: IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
+---------------------------------------------------------------------------------------------------------------------------------------------
+*/
 
-/*CSS TO REMOVE BOTTOM RIGHT NAME AND VERSION TEXT*/
+
+/*CSS TO REMOVE BOTTOM RIGHT NAME AND VERSION TEXT*
 :root {
 	--version-content: "";
-	--theme-name: "";
+	--theme-name: "Quiet";
 	--theme-letter: "";
 }
 
-/*removes the remaining 'v'*/
+body:before{color: rgba(0,0,0,0);background: rgba(0,0,0,0)}
+/*removes the remaining 'v'*//*
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before{content: ""!important;}
-
-.need-help-modal .header h1::after{content:;color:#fff;font-weight:700;font-size:0%;z-index:11;position:absolute;width:0%;left: 0px;margin-left: -45px;top: 16px;font-family:Satisfy;text-shadow:1px 1px 1px rgba(0, 0, 0, 0);}
-
+/*
+.need-help-modal .header h1::after{content:;color:#fff;font-weight:700;font-size:0%;z-index:0;position:absolute;width:0%;left: 0px;margin-left: -45px;top: 16px;font-family:Satisfy;text-shadow:1px 1px 1px rgba(0, 0, 0, 0);}
+/*
 #bd-settingspane-container .content-column.default .ui-form-title.h2::after{content: ""!important;}
-
-body:before{content:"";z-index:1000000000000000000000000;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:5px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 0s ease;animation:version 0s ease;-webkit-animation-delay:0s;animation-delay:0s;}
-
-.channel-members::after {content: var(--theme-name)" v"var(--version-content);font-family: "Satisfy";text-align: center;background: #19191B;color: #2e2e30;font-weight: 700;font-size: 0%;width: 100%;height: 70px;bottom: 0px;position: absolute;line-height: 75px;border-top: 2px solid #212121;left: -2px;z-index: 1;border-radius: 0px !important;padding-right: 30px;}
+/*
+body:before{content:"";z-index:0;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:5px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 0s ease;animation:version 0s ease;-webkit-animation-delay:0s;animation-delay:0s;}*/
 
 
+/*remove bottom right corner thing*/
+.channel-members::after {
+    display: none;
+    transform: translate(0px,3px);
+}
+
+[class*="scroller-"].channel-members {
+    height: 100%!important;/*
+    height: 89.8%!important;*/
+}
+.private .channelTextArea-os01xC {
+    margin: 20px 0 32px 0!important
+}
+
+/*Name size*
+#app-mount .accountDetails-15i-_e {
+    position: unset;
+    right: 0px;
+    bottom: -12px;
+    min-width: unset !important;
+}
+#app-mount .accountDetails-15i-_e .username {
+    width: unset !important;
+    font-size: 20px;
+    transform: translate(0px,-6px);
+}
+/* Hide Descriminator Number *
+.accountDetails-15i-_e .discriminator {
+    color: transparent;
+}
+/*Revert account details text in bottom left*/
+#app-mount .accountDetails-15i-_e {position:unset !important;min-width:unset !important;bottom:0px !important;}
+#app-mount .accountDetails-15i-_e .username {font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important;text-align:unset !important;height:30px!important;line-height:20px!important;transform: translate(16px,-2px);}
+.accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
+.accountDetails-15i-_e .username{border-top: 0px;}
+
+
+
+/*Daniel's tag  USER ID — 128948605263413248*/
+.message-group:not(.compact) .avatar-large[style*="128948605263413248"] ~ .comment .message h2 span.username-wrapper::after,.channel-members .member .avatar-small[style*="128948605263413248"] ~ .member-inner .member-username .member-username-inner::after{margin-left: 6px;padding: 1px 4px;border-radius: 3px;background: #de8237;color: #fff;content: "100% DINGUS";vertical-align: bottom;text-transform: uppercase;font-weight: 600;font-size: 10px;line-height: 14px;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-shrink: 0;text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;}
+
+.message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::after,.channel-members .member .avatar-small[style*="131903461771051009"] ~ .member-inner .member-username .member-username-inner::after{margin-left: 6px;padding: 1px 4px;border-radius: 3px;background: #0064B4;color: #fff;content: "The Legend of Link";vertical-align: bottom;text-transform: uppercase;font-weight: 600;font-size: 10px;line-height: 14px;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-shrink: 0;text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;}
 /*
 ---------------------------------------------------------------------------------------------------------------------------------------------
 CUSTOM CSS FOR CATEGORIES
 ---------------------------------------------------------------------------------------------------------------------------------------------
-*/
+
 div[class*=wrapperDefault-] > div[class*=nameCollapsed-],
 div[class*=wrapperDefault-] > div[class*=nameDefault-],
 div[class*=wrapperDefault-] > div[class*=nameHovered-],
@@ -139,7 +198,7 @@ div[class*=wrapperHoveredCollapsed-] > div[class*=nameHoveredCollapsed-]:before 
 }
 
 
-/*moves the + next to categories 4px down to match the name*/
+/*moves the + next to categories 4px down to match the name
 .horizontal-2BEEBe>.flex-lFgbSz:last-child, .horizontal-2BEEBe>.flexChild-1KGW5q:last-child{
     transform:translate(0px, 4px);
 }
@@ -149,6 +208,90 @@ div[class*=wrapperHoveredCollapsed-] > div[class*=nameHoveredCollapsed-]:before 
 END CUSTOM CSS FOR CATEGORIES
 ---------------------------------------------------------------------------------------------------------------------------------------------
 */
+
+/*
+.nameCollapsed-3_ChMu, .nameDefault-Lnjrwm,
+.nameHovered-1YFSWq, .nameHoveredCollapsed-2c-EHI{
+    color: var(--main-color) !important;
+    background-image: linear-gradient(90deg, transparent, transparent), linear-gradient(90deg, transparent, var(--main-color), transparent);
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    opacity: 0.9;
+    transform: translateY(-8px);
+}
+.nameHovered-1YFSWq {
+    opacity: 1;
+    transform: translateY(-8px);
+}
+.nameCollapsed-3_ChMu {
+    opacity: 0.6;
+    transform: translateY(-1px);
+}
+.nameHoveredCollapsed-2c-EHI {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}*/
+
+/* Make Channel Categories Match Role Categories in Quiet - MasicoreLord, edited by cube_guy*/
+.nameCollapsed-3_ChMu, .nameDefault-Lnjrwm,
+.nameHovered-1YFSWq, .nameHoveredCollapsed-2c-EHI,
+.nameMuted-1n0LSj, .nameUnread-WKlSv-
+{
+    color: var(--main-color) !important;
+    background-image: linear-gradient(90deg, transparent, transparent), linear-gradient(90deg, transparent, var(--main-color), transparent);
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    opacity: 0.9;
+    transform: translateY(-8px);
+}
+.nameHovered-1YFSWq {
+    opacity: 1;
+    transform: translateY(-8px);
+}
+.nameCollapsed-3_ChMu {
+    opacity: 0.6;
+    transform: translateY(-1px);
+}
+.nameHoveredCollapsed-2c-EHI {
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+
+[class*=container-] .containerDefault-7RImuF, .containerDragAfter-3rB7mB, .containerDragBefore-12YyA9, [class*=container-] .containerUserOver-2YhVL6 {
+    margin-top: 3px;
+}
+
+/*Categories Arrow Colored - cube_guy*/
+.iconCollapsed-1INdMX, .iconDefault-xzclSQ, .nameCollapsed-3_ChMu, .nameDefault-Lnjrwm{
+    color: var(--main-color);
+}
+.iconHoveredCollapsed-jNYgOD, .iconHovered-3PRzOR, .nameCollapsed-3_ChMu, .nameDefault-Lnjrwm{
+    color: var(--hover-color);
+}
+
+/* Color Muted Icon Arrow Quiet/Reborn - MasicoreLord */
+.iconMuted-Hb4ttQ {
+    color: var(--main-color)!important;
+    opacity: 0.6!important;
+}
+
+/* Reborn/Quiet + Button Recolor - MasicoreLord */
+.icon-2WU8ha {
+    fill: var(--main-color);
+    transform: translateY(-4px)  
+}
+
+
 
 /*voice channel glow imported from clearvision*/
 .channels-wrap [class*="scroller-"] [class*="Voice"] + div [class*="user"] [class*="avatar"]{border-color:transparent!important;box-shadow:none!important;z-index:10}
@@ -166,7 +309,7 @@ END CUSTOM CSS FOR CATEGORIES
 
 
 
-/*Quiet Title Bar Revert*/
+/*Quiet Title Bar Revert
 .win-buttons.win-buttons-light .win-minimize{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xOSAxOXYtMkg3djJoMTJ6Ii8+CiAgICA8cGF0aCBkPSJNMSAyNWgyNFYxSDF2MjR6Ii8+CiAgPC9nPgo8L3N2Zz4=) !important;background-color:transparent !important;border-radius:0px !important;}
 
 .win-buttons.win-buttons-light .win-maximize{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0xIDFoMjR2MjRIMVYxeiIvPgogICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTTggMTNINnY3aDd2LTJIOHYtNXptLTIgMGgyVjhoNVY2SDZ2N3ptNyA1djJoN3YtN2gtMnY1aC01em0wLTEydjJoNXY1aDJWNmgtN3oiLz4KICA8L2c+Cjwvc3ZnPg==) !important;background-color:transparent !important;border-radius:0px !important;}
@@ -174,24 +317,40 @@ END CUSTOM CSS FOR CATEGORIES
 .win-buttons.win-buttons-light .win-close{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+CiAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgIDxwYXRoIGQ9Ik0xIDFoMjR2MjRIMVYxeiIvPgogICAgPHBhdGggZmlsbD0iI0ZGRiIgZD0iTTIwIDcuNDFMMTguNTkgNiAxMyAxMS41OSA3LjQxIDYgNiA3LjQxIDExLjU5IDEzIDYgMTguNTkgNy40MSAyMCAxMyAxNC40MSAxOC41OSAyMCAyMCAxOC41OSAxNC40MSAxMyAyMCA3LjQxeiIvPgogIDwvZz4KPC9zdmc+) !important;background-color:transparent !important;border-radius:0px !important;}
 
 
-/*bottom left corner profile box*/
-.container-iksrDt{height: 71px;background: #19191b;border-top: 2px solid #212121;width: calc(100% - -36px);padding: 0 23px;position: relative;z-index: 10;color: #fff;border-radius: 0px !important;margin-left: -78px;margin-bottom: -1px;}
+/*bottom left corner profile box
+.container-iksrDt{height: 66px;background: #19191b;border-top: 2px solid #212121;width: calc(100% + 35px);padding: 1px 23px;position: relative;z-index: 10;color: #fff;border-radius: 0px !important;margin-left: -78px;margin-bottom: 0px;}
+*/
+.container-iksrDt{height: 71px;background: #19191b;border-top: 2px solid #212121;width: calc(100% - -60px);position: relative;z-index: 10;color: #fff;border-radius: 0px !important;margin-left: 0px;margin-bottom: -1px;}
 
+.theme-dark .chat form{
+    transform: translate(0px, 0px);
+}
+/*
+.theme-dark .inner-3if5cm{
+    transform: translate(0px,-1px);
+}
 
-/*server add button adjustments*/
-.guilds-wrapper .guilds-add{border: 0px solid transparent;position: fixed !important;bottom: 72px;width: 76px !important;border-radius: 0px;left: 0px;height: 3px !important;line-height: 1px;font-size: 0px !important;transition: .1s all linear;}
+/*server add button adjustments
+.guilds-wrapper .guilds-add{border: 0px solid transparent;position: fixed !important;bottom: 71px;width: 76px !important;border-radius: 0px;left: 0px;height: 6px !important;line-height: 1px;font-size: 0px !important;transition: .1s all linear;}
 
 .guilds-add:hover{transform:scale(1.0);box-shadow:0 0px 76px 0px var(--hover-color);}
+
+*//*
+.guilds-wrapper .guilds-add{transform: translate(0px,30px);}
+*/
+
+
+.theme-dark .chat form{/*border-top: 1px solid #212121 !important;*/border-left: 2px solid #212121 !important;border-right: 2px solid #212121 !important;}
 
 
 /*removes capitalization of channel names*/
 .theme-dark .chat .title-wrap .channel-name{font-size:16px !important;text-transform:none !important;}
 
 
-/*read all messages button customization*/
-#RANbutton-frame{margin-bottom:0px !important;}
+/*read all messages button customization – cube_guy*/
+#RANbutton-frame{margin-bottom:0px !important;transform: translate(0px,0px);}
 
-#RANbutton-frame .guild-inner{width:76px !important;height:20px !important;border-radius:0% !important;margin-top:12px !important;margin-left:-13px !important;transition:.2s linear all;background-color:#131313 !important;}
+#RANbutton-frame .guild-inner{width:76px !important;height:20px !important;border-radius:0% !important;margin-top:0px !important;margin-left:-13px !important;transition:.2s linear all;background-color:#131313 !important;text-align: center;padding-left: 2px;}
 
 #RANbutton-frame .guild-inner:hover{border-radius:0px !important;background-color:var(--main-color) !important;color: rgba(255, 255, 255, 1.0) !important;}
 
@@ -199,17 +358,118 @@ END CUSTOM CSS FOR CATEGORIES
 
 #RANbutton:hover{color: rgba(255, 255, 255, 1.0) !important;}
 
+.guilds-wrapper .dms{margin-bottom: 10px;}
 
-/*I have no idea what this is for*/
+
+form .bf-toolbar{
+    transform: translate(0px,-46px) !important;
+}
+
+
+.theme-dark .inner-3if5cm{
+    border-left: 0px;
+    border-right: 0px;
+}
+
+
+/*I have no idea what this is for
 form .bf-toolbar{position:absolute !important;transform:translate(-4px, -60px) !important;z-index:5;margin-left: 50px;}
 
 
-/*removes badge on the messages button above guilds*/
-.app .guilds>div.guild:first-child .badge{margin: 0px 0px 0px 0px !important;padding: 50px 0px 0px 0px;border-radius: 0px !important;background-color: #19191b;border-bottom: 2px solid var(--main-color);transition: .2s background-color linear;color: rgba(0,0,0,0);}
+/*removes badge on the messages button above guilds
+.app .guilds>div.guild:first-child .badge{margin: 0px 0px 0px 0px !important;padding:50px 0px 0px 0px;border-radius: 0px !important;background-color: #19191b;border-bottom: 2px solid var(--main-color);transition: .1s background-color linear;color: rgba(0,0,0,0);}
+*/
 
+.app .guilds>div.guild:first-child .badge{margin: 0px 2px 4px 0px !important;padding: 20px 38px 100px 35px;border-radius: 0px !important;background-color: rgba(255, 255, 255, 0.0);border-bottom: 2px solid var(--main-color);transition: .2s background-color linear;transform: translate(0px,4px);}
+
+.app .guilds .guild:first-child{
+    height: 46px;
+    transform: translate(0px,-2px);
+}
+
+.guilds-wrapper .guilds .guild.active:first-of-type .guild-inner{
+    transform: translate(0px,-1px);
+}
+
+.app .guilds>div.guild:first-child:hover .badge{background-color: rgba(255, 255, 255, 0.0);}
+
+
+/*Add Friend button background*/
+.theme-dark #friends .tab-bar .tab-bar-item.tab-bar-item-primary{
+    background-color: #0063B1 !important;
+}
+
+/*Friends badge background*/
+.badge{
+    background-color:#0063B1;
+}
+
+/*height adjustment to the friends table, bottom line*/
+#friends .friends-table{
+    padding-top: 0px;
+    transform: translate(0px,-42px);
+    margin-bottom: -45px;
+}
+#friends .friends-table .friends-row{background:rgba(0, 0, 0, 0.2)!important;box-shadow:1px 1px 20px rgba(0, 0, 0, 0.25);border-radius:5px;transition:opacity 1000ms;}
+#friends .friends-table .friends-row .avatar-small{box-shadow:1px 1px 2px rgba(0, 0, 0, 0);}
+#friends .friends-table .friends-row:hover .friends-column-name .avatar-small{opacity:0.9;transform: scale(1) perspective(1px);box-shadow: 1px 1px 8px 1px rgba(0,0,0,0);}
 
 /*moves 'typing' ellipsis up to be aligned properly*/
-.typing .ellipsis{margin-top:-5px;transform:translate(0px, -1.5px);}
+.typing .ellipsis{margin-top:0px;}
+.chat .content form > .typing{position: fixed;bottom: 20px;left: 5%;}
+
+
+
+/*Status Picker moved to the right*/
+.status-picker.popout-menu{left:76px!important;width:220px !important;height:64px !important;border-right: 0px solid transparent !important;border-top: 0px solid transparent !important;border-left: 0px solid transparent !important;background: rgba(25,25,25,0.7) !important;transform: translate(0px, -2px);}
+
+.status-picker .popout-menu-item:hover:nth-of-type(5) > .status-icon-text > .status-text {
+    margin-top:-38px !important;
+    margin-left: 0px !important;
+    transform: translate(0px, -2px);
+}
+.status-picker .popout-menu-item:hover:nth-of-type(5) > .status-icon-text > .status-text:after {
+    content: "▼" !important;
+    margin-top:16px !important;
+    margin-left:-33px !important;
+    transform: translate(0px, -2px);
+}
+.status-picker .popout-menu-item:hover:nth-of-type(4) > .status-icon-text > .status-text {
+    margin-top:-38px !important;
+    margin-left: 0px !important;
+    transform: translate(0px, -2px);
+}
+.status-picker .popout-menu-item:hover:nth-of-type(4) > .status-icon-text > .status-text:after {
+    content: "▼" !important;
+    margin-top:16px !important;
+    margin-left:-55px !important;
+    transform: translate(0px, -2px);
+}
+.status-picker .popout-menu-item:hover:nth-of-type(3) > .status-icon-text > .status-text {
+    margin-top:-38px !important;
+    margin-left: 0px !important;
+    transform: translate(0px, -2px);
+}
+.status-picker .popout-menu-item:hover:nth-of-type(3) > .status-icon-text > .status-text:after {
+    content: "▼" !important;
+    margin-top:16px !important;
+    margin-left:-19px !important;
+    transform: translate(0px, -2px);
+}
+.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text {
+    margin-top:-38px !important;
+    margin-left: 0px !important;
+    transform: translate(0px, -2px);
+}
+.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text:after {
+    content: "▼" !important;
+    margin-top:16px !important;
+    margin-left:-26px !important;
+    transform: translate(0px, -2px);
+}
+
+
+
 
 
 .guild-channels{background-color:#131313 !important;}
@@ -263,3 +523,343 @@ div.message-group{background-color:#131313;}
 .message-group:hover .avatar-large[style*="172218388880293888"]{background-image:url(https://i.imgur.com/KUFVy78.png) !important;}
 
 *[style*="172218388880293888"] {background-image:url(https://i.imgur.com/KUFVy78.png) !important;}
+
+
+/*fixes from Mr. Cheese
+.theme-dark [class*=chat] [class*=title-]{background: #19191b;box-shadow: 0 0 !important;border-bottom: 2px solid var(--main-color);}
+
+.theme-dark .chat form{box-shadow: 0 0;height: 70px;margin-left: -3px;background-color: #19191b;}
+
+.container-2OU7Cz{background-color: transparent;}
+
+.appMount-14L89u{background-color: #121213;}
+
+[class*=titleBar-]{background-color: #121213 !important;}
+
+.app .guilds .guild:first-child{top: 22px;}
+
+.guilds-wrapper{margin-top: -5px !important;}
+
+.channels-3g2vYe{background-color: #19191b;}
+
+.private-channels .channel .icon-friends{border-radius: 3px;}
+
+.channelTextArea-os01xC{margin-top: 12px;}
+
+[style*="left: 42px; top: 32.5px;"]{display: none !important;}
+
+.titleWrapper-3Vi_wz.theme-dark{margin-top:-2px!important;}
+
+#app-mount > div.app-XZYfmp.platform-win > div.app.flex-vertical.theme-dark > div.layers.flex-vertical.flex-spacer > div.layer > div > div.flex-lFgbSz.flex-3B1Tl4.vertical-3X17r5.flex-3B1Tl4.directionColumn-2h-LPR.justifyStart-2yIZo0.alignStretch-1hwxMa.base-3AoPqv{overflow:visible !important;}
+
+/*fixes from TehPirate's link
+.container-RYiLUQ {
+    background-color: #19191b !important;
+}
+.theme-dark .title-qAcLxz {
+    background: #19191b;
+} 
+.appMount-14L89u {
+    background-color: #19191b;
+}
+.theme-dark .chat form {
+    box-shadow: 0 0;
+    height: auto
+    margin-left: -3px;
+    background-color: #19191b;
+}
+.theme-dark .headerBar-cxbhPD {
+    background: #19191b;
+}
+.channels-3g2vYe {
+    background-color: #19191b;
+}
+.app .guilds .guild:first-child {
+    margin-top: 22px;
+}
+.typeWindows-15E0Ys {
+    padding-top: 4px;
+    background: #1e1f20;
+    margin-top: 0px;
+}
+.theme-dark [class*=chat] [class*=title-]{
+    background: #19191b;
+    box-shadow: 0 0 !important;
+    border-bottom: 2px solid var(--main-color);
+}
+.title-qAcLxz, .titleCall-3X0yGQ {
+    height: 46px;
+}
+
+.scroller-wrap {
+    height: 100%;
+}
+
+.scroller.guilds {
+    height: 100% !important
+}
+
+.guilds-add {
+    bottom: 0px !important;
+}
+
+.container-iksrDt {
+    margin-left: 0px !important;
+    width: 220px !important;
+}
+
+.guilds-wrapper .guilds-add {
+    height: 5px !important;
+}
+
+
+.typing {
+    bottom: 0px;
+}
+
+div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
+    top: -10px;
+}
+    
+ .channelTextArea-os01xC {
+    margin: 13px 0 13px;
+}
+
+
+/*user popout from Izy#5368*/
+.userPopout-4pfA0d .headerNormal-1cioxU {background:rgba(0, 0, 0, 0.65)!important;background-image: url(https://betterdocs.net/img/bg.svg)!important;background-size: auto !important;}
+.headerStreaming-3F-wjT {background:rgba(0, 0, 0, 0.65)!important;background-image: url(https://betterdocs.net/img/bg.svg)!important;background-size: auto !important;}
+.headerLive-2dDMvp {border:1px solid rgb(89, 54, 149)!important;}
+.userPopout-4pfA0d {border-radius: 0px!important;}
+.userPopout-4pfA0d::before {filter: blur(0px)!important;}
+[class*="userPopout-"] .status-3jUEha {
+    bottom: -4px !important;
+    right: -4px !important;
+}
+.mask-2vyqAW {
+    -webkit-mask: none!important;
+}
+.image-EVRGPw {
+    border-radius: 0px;
+}
+
+/* title bar looks */
+#app-mount {
+    background-color: #0063B1;
+}
+
+#app-mount .titleBar-3_fDwJ {
+    padding-top: 2px;
+    background-color: #0063B1 !important;
+}
+
+#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa {
+    margin: auto 0;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0);
+}
+
+#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 {
+    margin: auto 0;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0);
+}
+
+#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 + .winButtonMinMax-bT_gQ1 {
+    margin: auto 0;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0);
+}
+
+#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 + .winButtonMinMax-bT_gQ1 svg, #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa svg, #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 svg, #app-mount .titleBar-3_fDwJ .wordmark-2L03Wr svg {
+    display: unset;
+}
+
+
+
+
+.title-qAcLxz {box-shadow: 0 0px 0 transparent !important;}
+
+[d="M3.57642276,0.141304348 L0,0.141304348 L0,4.22826087 L2.38069106,6.40217391 L2.38069106,2.43478261 L3.66260163,2.43478261 C4.47052846,2.43478261 4.86910569,2.83695652 4.86910569,3.4673913 L4.86910569,6.5 C4.86910569,7.13043478 4.49207317,7.55434783 3.66260163,7.55434783 L0,7.55434783 L0,9.85869565 L3.57642276,9.85869565 C5.49390244,9.86956522 7.29288618,8.90217391 7.29288618,6.66304348 L7.29288618,3.39130435 C7.29288618,1.13043478 5.49390244,0.141304348 3.57642276,0.141304348 Z M22.3310976,6.67391304 L22.3310976,3.32608696 C22.3310976,2.11956522 24.4640244,1.83695652 25.1103659,3.05434783 L27.0817073,2.23913043 C26.3168699,0.510869565 24.8949187,0 23.7207317,0 C21.803252,0 19.9073171,1.13043478 19.9073171,3.32608696 L19.9073171,6.67391304 C19.9073171,8.88043478 21.803252,10 23.6776423,10 C24.8841463,10 26.3276423,9.39130435 27.1247967,7.81521739 L25.0134146,6.82608696 C24.4963415,8.17391304 22.3310976,7.84782609 22.3310976,6.67391304 Z M15.8030488,3.7826087 C15.0597561,3.61956522 14.5642276,3.34782609 14.5319106,2.88043478 C14.575,1.75 16.2878049,1.7173913 17.2896341,2.79347826 L18.8731707,1.55434783 C17.8821138,0.326086957 16.7617886,0 15.598374,0 C13.8424797,0 12.1404472,1 12.1404472,2.91304348 C12.1404472,4.77173913 13.5408537,5.76086957 15.0813008,6 C15.8676829,6.10869565 16.7402439,6.42391304 16.7186992,6.97826087 C16.654065,8.02173913 14.5426829,7.9673913 13.5839431,6.7826087 L12.0650407,8.23913043 C12.9591463,9.40217391 14.1764228,10 15.3182927,10 C17.074187,10 19.0239837,8.9673913 19.0993902,7.08695652 C19.2071138,4.69565217 17.5050813,4.09782609 15.8030488,3.7826087 Z M8.59634146,9.85869565 L11.0093496,9.85869565 L11.0093496,0.141304348 L8.59634146,0.141304348 L8.59634146,9.85869565 Z M49.2835366,0.141304348 L45.7071138,0.141304348 L45.7071138,4.22826087 L48.0878049,6.40217391 L48.0878049,2.43478261 L49.3589431,2.43478261 C50.1668699,2.43478261 50.5654472,2.83695652 50.5654472,3.4673913 L50.5654472,6.5 C50.5654472,7.13043478 50.1884146,7.55434783 49.3589431,7.55434783 L45.6963415,7.55434783 L45.6963415,9.85869565 L49.2727642,9.85869565 C51.1902439,9.86956522 52.9892276,8.90217391 52.9892276,6.66304348 L52.9892276,3.39130435 C53,1.13043478 51.2010163,0.141304348 49.2835366,0.141304348 Z M31.7353659,0 C29.753252,0 27.7819106,1.09782609 27.7819106,3.33695652 L27.7819106,6.66304348 C27.7819106,8.89130435 29.7640244,10 31.7569106,10 C33.7390244,10 35.7103659,8.89130435 35.7103659,6.66304348 L35.7103659,3.33695652 C35.7103659,1.10869565 33.7174797,0 31.7353659,0 Z M33.2865854,6.66304348 C33.2865854,7.35869565 32.5109756,7.7173913 31.7461382,7.7173913 C30.9705285,7.7173913 30.1949187,7.36956522 30.1949187,6.66304348 L30.1949187,3.33695652 C30.1949187,2.61956522 30.9489837,2.23913043 31.7030488,2.23913043 C32.4894309,2.23913043 33.2865854,2.58695652 33.2865854,3.33695652 L33.2865854,6.66304348 Z M44.3605691,3.33695652 C44.3067073,1.05434783 42.7770325,0.141304348 40.8056911,0.141304348 L36.9815041,0.141304348 L36.9815041,9.86956522 L39.4268293,9.86956522 L39.4268293,6.77173913 L39.8577236,6.77173913 L42.0768293,9.85869565 L45.0930894,9.85869565 L42.4861789,6.52173913 C43.6495935,6.15217391 44.3605691,5.14130435 44.3605691,3.33695652 Z M40.8487805,4.65217391 L39.4268293,4.65217391 L39.4268293,2.43478261 L40.8487805,2.43478261 C42.3784553,2.43478261 42.3784553,4.65217391 40.8487805,4.65217391 Z"]{fill: white;}
+
+.wordmark-2L03Wr::after{content: var(--theme-name)" "var(--version-content);font-family: "Satisfy";color: rgba(0,0,0,0); font-size: 16px;font-weight: 600;position: fixed; left: 7px; top: 7px;}
+
+.chat .divider.divider-red > span {color:var(--main-color) !important;}
+
+
+/* OLD TITLE BAR - By intrnl, modified by Raiju*/
+div[class*="titleBar-"] {
+    height: 0px;
+    margin-top: 0px;
+}
+div[class*="titleBar-"]:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6px;
+    height: 14px;
+    z-index: 3002;
+    -webkit-app-region: drag;
+}
+div[class*="titleBar-"]:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 6px;
+    z-index: 3002;
+}
+div[class*="wordmark-"], div[class*="winButton-"] svg {
+    display: none;
+}
+div[class*="winButton-"] {
+    top: 15px;
+    height: 30px;
+    width: 30px;
+    right: 8px;
+    background-position: center;
+    opacity: .6;
+    transition: 200ms ease;
+}
+div[class*="winButton-"]:hover{
+	-webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    
+    background-color: var(--hover-color) !important;
+	border-radius: 10px;
+    opacity: 1;
+}
+div[class*="titleBar-"] div:nth-of-type(2) {
+	background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/close.svg) !important;  
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px;
+    transform: translate(-6px,0px);
+}
+div[class*="titleBar-"] div:nth-of-type(3) {
+    background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/fullscreen.svg) !important;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px;
+    transform: translate(-6px,0px);
+}
+div[class*="titleBar-"] div:nth-of-type(4) {
+    background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/remove.svg) !important;
+	background-repeat: no-repeat;
+	background-position: center 7px;
+	background-size: 50px;
+    transform: translate(-6px,0px);
+}
+
+.chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-'],
+#friends [class*='flex-'] [class*='flex-']:last-of-type,
+[class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type {
+    margin-right: 98px;
+}
+.chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-']:after,
+#friends [class*='flex-'] [class*='flex-']:last-of-type:after,
+[class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type:after {
+    content: '';
+    width: 1px;
+    height: 22px;
+    background-color: hsla(240,6%,97%,.1);
+}
+/* OLD TITLE BAR */
+/*adjust guild margin*/
+.app .guilds .guild:first-child {margin-top: 4px!important;padding-bottom:0px !important}
+
+
+
+/*It only works for Nitro users that have a GIF avatar. If you are Nitro and don't have a GIF avatar then it won't see you as a Nitro user*/
+.message-group:not(.compact) .avatar-large[style*="/a_"] ~ .comment .body h2:before{content:"nitro";position:relative;margin:0 0 0 5px;padding:3px 4px 2px 3px;color:#fff;font-size:10px;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);text-transform:uppercase;background-color: #7289DA;font-weight: 600;border-radius:3px;order:2;height:100%;top: 4px !important;}
+
+
+
+
+/* Online Minimal 
+.channel-members{
+    transform:translate(145px);
+    z-index:2;
+    transition:all 300ms ease-in-out;
+}
+.channel-members:hover{
+    animation: member 300ms ease-in-out;
+    transform:translate(0px);
+    background: #19191b !important;
+    box-shadow: 0px 1px 4px 0px #131313;
+}
+.channel-members .member .member-activity,
+.channel-members .member .member-username-inner{
+    opacity:0;
+    transition:opacity 300ms ease, margin 100ms ease;
+}
+.channel-members .member .member-username-inner{
+    margin-bottom: 6px;
+}
+.channel-members:hover .member .member-activity, .channel-members:hover .member .member-username-inner{
+    opacity:1;
+}
+.channel-members h2{
+    transform-origin:left;
+    transform:scale(0.7);
+    transition: all 300ms ease;
+    background-color: transparent;
+    color: var(--main-color) !important;
+    padding: 6px;
+}
+.channel-members:hover h2{
+    transform:scale(1);
+    padding: 4px 58px;
+    margin-left: -6px
+}
+.channel-members .avatar-small{
+    transform:scale(1.2);
+}
+.channel-members:hover .avatar-small{
+    transform:scale(1);
+}
+.chat.flex-vertical.flex-spacer>.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical{
+    margin-right:-145px !important;
+    z-index:1
+}
+.chat.flex-vertical.flex-spacer.private>.content.flex-spacer.flex-horizontal>.flex-spacer.flex-vertical{
+    margin-right:0px !important;
+    z-index:1
+}
+.channel-members:hover::-webkit-scrollbar { 
+    width: 4px !important 
+}
+.channel-members h2 {
+    margin-left: -6px !important;
+}
+.channel-members::after {
+    display: none;
+}
+.scroller.channel-members {
+    height: calc(100% - 70px);
+    border-bottom: 2px solid #212121;
+}
+
+/*Friends action button colors – cube_guy*/
+#friends .friends-table .friends-row .friends-column-actions .friends-action:first-child{background-color: var(--main-color) !important;}
+
+#friends .friends-table .friends-row .friends-column-actions .friends-action:hover:nth-child(1){background-color: var(--main-color) !important;}
+
+#friends .friends-table .friends-row .friends-column-actions .friends-action:nth-child(2){background-color: var(--hover-color) !important;transition-delay: 200ms;}
+
+#friends .friends-table .friends-row .friends-column-actions .friends-action:hover:nth-child(2){background-color: var(--main-color) !important;}
+
+#friends .friends-table .friends-row .friends-column-actions .friends-action:nth-child(3){background-color: rgba(199, 0, 67, 0.7) !important;transition-delay: 200ms;}
+
+#friends .friends-table .friends-row .friends-column-actions .friends-action:hover:nth-child(3){background-color: rgba(199, 0, 67, 1) !important;}
