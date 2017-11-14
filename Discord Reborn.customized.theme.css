@@ -409,10 +409,10 @@ form .bf-toolbar{
     height: 46px;
     transform: translate(0px,-2px);
 }
-
+/*
 .guilds-wrapper .guilds .guild.active:first-of-type .guild-inner{
     transform: translate(0px,-1px);
-}
+}*/
 
 .app .guilds>div.guild:first-child:hover .badge{background-color: rgba(255, 255, 255, 0.0);}
 
