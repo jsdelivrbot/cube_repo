@@ -966,3 +966,15 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 
 /*removes background of mentions*/
 .theme-dark .message-group .comment .markup .mention{background:transparent!important;}
+
+
+/* Custom DM Icon */
+.friends-icon {
+    background-image: url(https://rawgit.com/cubeguy/cube_repo/master/icons/Triforce.png)!important;
+    transform:translateY(-2px);
+}
+
+/*Fixes Status Everywhere plugin compatibility for Quiet and Discord Reborn - cube_guy*/
+.message-group .avatar-large{margin-left:3px;}
+/*Status Everywhere plugin, squared off corners - cube_guy*/
+.avatar-large .status{border-radius:0px;}
