@@ -409,8 +409,8 @@ form .bf-toolbar{
     height: 46px;
     transform: translate(0px,-2px);
 }
-/*
-.guilds-wrapper .guilds .guild.active:first-of-type .guild-inner{
+
+/*.guilds-wrapper .guilds .guild.active:first-of-type .guild-inner{
     transform: translate(0px,-1px);
 }*/
 
@@ -433,11 +433,17 @@ form .bf-toolbar{
 }
 
 /*height adjustment to the friends table, bottom line*/
-#friends .friends-table{
+#friends .friends-table{/*
+    transform: translate(0px,-42px);*/
+    margin-bottom: 0px;
+    margin-top: 0px!important;
     padding-top: 0px;
-    transform: translate(0px,-42px);
-    margin-bottom: -42px;
 }
+#friends .friends-table .friends-table-body{
+    margin: 0px 0 0;
+    height: calc(100% - 90px);
+}
+
 #friends .friends-table .friends-row{background:rgba(0, 0, 0, 0.2)!important;box-shadow:1px 1px 20px rgba(0, 0, 0, 0.25);border-radius:5px;transition:opacity 1000ms;}
 #friends .friends-table .friends-row .avatar-small{box-shadow:1px 1px 2px rgba(0, 0, 0, 0);}
 #friends .friends-table .friends-row:hover .friends-column-name .avatar-small{opacity:0.9;transform: scale(1) perspective(1px);box-shadow: 1px 1px 8px 1px rgba(0,0,0,0);}
@@ -456,7 +462,7 @@ form .bf-toolbar{
 
 
 
-/*Status Picker moved to the right*/
+/*Status Picker*/
 .status-picker.popout-menu{left:76px!important;width:220px !important;height:64px !important;border-right: 0px solid transparent !important;border-top: 0px solid transparent !important;border-left: 0px solid transparent !important;background: rgba(0,0,0,0.4) !important;transform: translate(0px, 0px);}
 
 .status-picker .popout-menu-item:hover:nth-of-type(5) > .status-icon-text > .status-text {
@@ -495,8 +501,8 @@ form .bf-toolbar{
     margin-top:16px !important;
     margin-left:-26px !important;
 }
-
-
+/*Change Colour of Status Picker's Online to Main Colour — cube_guy*/
+.status-picker .popout-menu-item:nth-child(1){background-color: var(--main-color)!important;}.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text:after{color:var(--main-color);}.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text{background:var(--main-color);}
 
 
 
@@ -974,7 +980,7 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
     transform:translateY(-2px);
 }
 
-/*Fixes Status Everywhere plugin compatibility for Quiet and Discord Reborn - cube_guy*/
+/*Fixes Status Everywhere plugin compatibility for Quiet and Discord Reborn — cube_guy*
 .message-group .avatar-large{margin-left:3px;}
-/*Status Everywhere plugin, squared off corners - cube_guy*/
+/*Status Everywhere plugin, squared off corners — cube_guy*
 .avatar-large .status{border-radius:0px;}
