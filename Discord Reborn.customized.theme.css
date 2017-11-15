@@ -29,6 +29,9 @@ THESE PEOPLE HAVE HELPED CREATE THIS THEME IN ONE WAY OR THE OTHER.
 IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
 ---------------------------------------------------------------------------------------------------------------------------------------------
 */
+body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:0px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 3s ease;animation:version 3s ease;-webkit-animation-delay:4s;animation-delay:4s;}
+
+
 /*remove bottom right corner thing*/
 .channel-members::after {
     display: none;
@@ -353,7 +356,7 @@ END CUSTOM CSS FOR CATEGORIES
 /*read all messages button customization – cube_guy*/
 #RANbutton-frame{margin-bottom:0px !important;transform: translate(0px,0px);}
 
-#RANbutton-frame .guild-inner{width:76px !important;height:20px !important;border-radius:0% !important;margin-top:0px !important;margin-left:-13px !important;transition:.2s linear all;background-color: rgba(0,0,0,0) !important;text-align: center;padding-left: 2px;}
+#RANbutton-frame .guild-inner{width:76px !important;height:20px !important;border-radius:0% !important;margin-top:0px !important;margin-left:-13px !important;transition:.2s linear all;background-color: transparent !important;text-align: center;padding-left: 2px;}
 
 #RANbutton-frame .guild-inner:hover{border-radius:0px !important;background-color:var(--main-color) !important;color: rgba(255, 255, 255, 1.0) !important;}
 
@@ -421,6 +424,8 @@ form .bf-toolbar{
 .chat .divider.divider-red>span{padding:0px 0px;font-size:0px;height:0px;}.chat .divider.divider-red{height:0px;}
 .chat .new-messages-bar{opacity:0;}
 
+/*Moves status icon next to username in DMs*/
+.title-qAcLxz .status, .titleCall-3X0yGQ .status{transform:translateY(-2px);}
 
 /*Add Friend button background*/
 .theme-dark #friends .tab-bar .tab-bar-item.tab-bar-item-primary{
@@ -431,6 +436,131 @@ form .bf-toolbar{
 .badge{
     background-color: var(--main-color);
 }
+#friends .tab-bar .tab-bar-item.selected .badge{
+    background-color: white!important;
+}
+.theme-dark #friends .tab-bar .tab-bar-item.selected .badge{
+    color: var(--main-color)!important;
+}
+.theme-dark #friends .tab-bar .tab-bar-item.tab-bar-item-primary.selected .badge{
+    color: var(--main-color)!important;
+}
+
+/*Squared off stuff*/
+.badge{border-radius:0px;}
+
+#friends .tab-bar .tab-bar-item{border-radius:0px;}
+
+.private-channels .channel a{border-radius:0px;}
+
+.search-bar .search-bar-inner{border-radius:0px;}
+
+.search .search-bar{border-radius:0px;}
+
+.guild-inner{border-radius:0px!important;}
+.dms .guild .guild-inner:first-child{border-radius:0px!important;}
+.guilds-wrapper .guilds .guild.unread:before{border-radius:0px;}
+.guilds-wrapper .guilds .guild.selected:before, .guilds-wrapper .guilds .guild.unread:before{border-radius:0px;}
+.guilds-wrapper .guilds-add{border-radius:0px;}
+
+.content-2mSKOj{border-radius:0px;}
+.unread-23Kvxk{border-radius:0px;}
+
+.mention{border-radius:0px;}
+.message-group .mentioned .message-text:after{border-radius:0px 0 0 0px;}
+
+.tooltip{border-radius:0px;}
+
+.modal-3HOjGZ{border-radius:0px;}
+
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item .popout-menu-icon{border-radius:0px;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item .popout-menu-item-label{border-radius:0px;}
+
+.avatarDefault-3jtQoc, .avatarSpeaking-3teDH6{border-radius:0px;}
+.guilds-wrapper .guilds .guild.audio .guild-inner:after, .guilds-wrapper .guilds .guild.video .guild-inner:after{border-radius:0px;}
+
+#user-profile-modal .guilds .guild .avatar-large:empty{border-radius:0px!important;}
+
+.spinner-pulsing-ellipsis .spinner-item{border-radius:0px;height:4px;}
+
+#friends .friends-table .friends-row .friends-column-actions .friends-action{border-radius:0px;}
+
+#user-profile-modal .btn{border-radius:0px;}
+
+.context-menu{border-radius:0px;background:rgba(0,0,0,0.7);}
+.theme-dark.context-menu{background:rgba(0,0,0,0.7);}
+.theme-dark.context-menu .item-subMenu{background:rgba(0,0,0,0.8);}
+.theme-dark.context-menu .item-subMenu:hover{background:rgba(0,0,0,0.9);}
+.theme-dark.context-menu .context-menu{background:rgba(0,0,0,0.5);}
+
+.mask-2vyqAW{border-radius: 0px !important;}
+
+.theme-dark .message-group .embed{border-radius:0px!important;}
+.embed-wrapper .embed-color-pill{border-radius:0px;}
+
+#user-profile-modal .guilds .section .connected-accounts .connected-account{border-radius:0px;}
+
+.channel-members .member:hover{border-radius:0px;}
+
+.status-picker .popout-menu-item{border-radius:0px;}
+.status-picker .popout-menu-item{transform:translate(4px,-4px);}
+
+.chat .messages.scroller::-webkit-scrollbar-thumb, .chat .messages.scroller::-webkit-scrollbar-track-piece {
+    border-radius: 0 !important;
+}
+*::-webkit-scrollbar-thumb, *::-webkit-scrollbar-track-piece {
+    border-radius: 0 !important;
+}
+
+*{border-radius:0!important}
+*::after, *::before, * {border-radius: 0 !important;}
+
+/*Speaking  Indicator Colour to Main Color*/
+.ui-call-avatar-border.voice.speaking{box-shadow:inset 0 0 0 3px var(--main-color);}
+.avatarSpeaking-3teDH6{box-shadow:0 0 0 2px var(--main-color), inset 0 0 0 0}
+
+/* Voice Connect OK To Main Color */
+.inner-ptMwR- .rtc-connection-status-connected {
+    color: var(--main-color); !important
+}
+.inner-ptMwR- .rtc-connection-quality-fine .ping {
+    background-image: url(https://i.imgur.com/RZCOtTu.png);
+}
+.buttonGreenFilled-6QHNrw {
+    background-color: var(--main-color); !important
+    color: #fff;
+}
+.buttonGreenFilledDefault-_lLQaz:hover {
+    background-color: var(--hover-color); !important
+}
+.ui-call-avatar-border.video.speaking {
+    -webkit-box-shadow: inset 0 0 0 2px #007dbd;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 2px #007dbd;
+}
+
+
+.theme-dark .markup .hljs[class~="java" i]::before, .theme-dark .markup .hljs[class~="sql" i]::before, .theme-dark .markup .hljs[class~="ruby" i]::before, .theme-dark .markup .hljs[class~="coffee" i]::before, .theme-dark .markup .hljs[class~="xl" i]::before, .theme-dark .markup .hljs[class~="py" i]::before, .theme-dark .markup .hljs[class~="python" i]::before, .theme-dark .markup .hljs[class~="html" i]::before, .theme-dark .markup .hljs[class~="md" i]::before, .theme-dark .markup .hljs[class~="markdown" i]::before, .theme-dark .markup .hljs[class~="bash" i]::before, .theme-dark .markup .hljs[class~="js" i]::before, .theme-dark .markup .hljs[class~="javascript" i]:before, .theme-dark .markup .hljs[class~="css" i]::before, .theme-dark .markup .hljs[class~="vb" i]::before, .theme-dark .markup .hljs[class~="visualbasic" i]::before, .theme-dark .markup .hljs[class~="lua" i]::before, .theme-dark .markup .hljs[class~="php" i]::before, .theme-dark .markup .hljs[class~="swift" i]::before, .theme-dark .markup .hljs[class~="makefile" i]::before, .theme-dark .markup .hljs[class~="go" i]::before, .theme-dark .markup .hljs[class~="ini" i]::before, .theme-dark .markup .hljs[class~="rust" i]::before, .theme-dark .markup .hljs[class~="prolog" i]::before, .theme-dark .markup .hljs[class~="ts" i]::before, .theme-dark .markup .hljs[class~="typescript" i]::before, .theme-dark .markup .hljs[class~="http" i]::before, .theme-dark .markup .hljs[class~="json" i]::before, .theme-dark .markup .hljs[class~="xml" i]::before, .theme-dark .markup .hljs[class~="less" i]::before{border-radius:0;border-bottom:5px solid rgba(0,0,0,0.5);}
+
+.copybutton{border-radius:0!important;}
+
+
+/*Private Call Fixes for Discord Reborn — cube_guy*/
+.private-channel-call{margin-top:46px!important;margin-bottom:-48px!important;}
+.private-channel-call-participants{transform:translateY(-24px);}
+.theme-dark .private-channel-call.minimum .private-channel-call-actions .center{background-color:transparent;border-color:transparent;}
+
+/*Jump to Present Button Adjustment — cube_guy*/
+.theme-dark .chat .jump-to-present-bar{transform:translateX(-30px);}
+.chat .jump-to-present-bar button:last-child{transform:translateX(6px);}
+
+/*Guild Bar Adjustment*/
+.guilds-wrapper .guilds{
+    padding: 2px 0px 200px 15px !important
+}
+.guilds-wrapper .guilds-add{transform:translateX(1px);}
+
+
 
 /*height adjustment to the friends table, bottom line*/
 #friends .friends-table{/*
@@ -446,7 +576,7 @@ form .bf-toolbar{
 
 #friends .friends-table .friends-row{background:rgba(0, 0, 0, 0.2)!important;box-shadow:1px 1px 20px rgba(0, 0, 0, 0.25);border-radius:5px;transition:opacity 1000ms;}
 #friends .friends-table .friends-row .avatar-small{box-shadow:1px 1px 2px rgba(0, 0, 0, 0);}
-#friends .friends-table .friends-row:hover .friends-column-name .avatar-small{opacity:0.9;transform: scale(1) perspective(1px);box-shadow: 1px 1px 8px 1px rgba(0,0,0,0);}
+#friends .friends-table .friends-row:hover .friends-column-name .avatar-small{opacity:0.9;transform: scale(1) perspective(1px);box-shadow: 1px 1px 8px 1px transparent;}
 
 #friends .friends-table .friends-table-body::after{
     border-top: 0px;
@@ -501,6 +631,7 @@ form .bf-toolbar{
     margin-top:16px !important;
     margin-left:-26px !important;
 }
+.status-picker .popout-menu-item{transition:all 999999999999999999ms cubic-bezier(0, 0, 0, 1)!important;animation:0!important;}
 /*Change Colour of Status Picker's Online to Main Colour — cube_guy*/
 .status-picker .popout-menu-item:nth-child(1){background-color: var(--main-color)!important;}.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text:after{color:var(--main-color);}.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text{background:var(--main-color);}
 
@@ -548,7 +679,7 @@ div.message-group{background-color:#131313;}
 .ui-standard-sidebar-view .content-region,.ui-standard-sidebar-view .content-region .scrollbar{background:#131313 !important;}
 
 
-.scroller-wrap .scroller.messages:hover::-webkit-scrollbar-track-piece{border: rgba(0,0,0,0) !important;background-color: rgba(0,0,0,0) !important;}
+.scroller-wrap .scroller.messages:hover::-webkit-scrollbar-track-piece{border: transparent !important;background-color: transparent !important;}
 
 
 /*removes Omni's obnoxious animated avatar – cube_guy*/
@@ -673,7 +804,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
     border-radius: 0px;
 }
 
-/* title bar looks */
+/*title bar buttons and shit*/
 #app-mount {
     background-color: var(--main-color);
 }
@@ -689,7 +820,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
     width: 14px;
     height: 14px;
     border-radius: 100%;
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
 }
 
 #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 {
@@ -698,7 +829,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
     width: 14px;
     height: 14px;
     border-radius: 100%;
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
 }
 
 #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 + .winButtonMinMax-bT_gQ1 {
@@ -707,7 +838,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
     width: 14px;
     height: 14px;
     border-radius: 100%;
-    background-color: rgba(0,0,0,0);
+    background-color: transparent;
 }
 
 #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 + .winButtonMinMax-bT_gQ1 svg, #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa svg, #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 svg, #app-mount .titleBar-3_fDwJ .wordmark-2L03Wr svg {
@@ -717,7 +848,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 /*gray top of title bar fix*/
 div[class*="titleBar-"]:after{height:0px!important;}
 
-
+/*
 .title-qAcLxz {box-shadow: 0 0px 0 transparent !important;}
 
 [d="M3.57642276,0.141304348 L0,0.141304348 L0,4.22826087 L2.38069106,6.40217391 L2.38069106,2.43478261 L3.66260163,2.43478261 C4.47052846,2.43478261 4.86910569,2.83695652 4.86910569,3.4673913 L4.86910569,6.5 C4.86910569,7.13043478 4.49207317,7.55434783 3.66260163,7.55434783 L0,7.55434783 L0,9.85869565 L3.57642276,9.85869565 C5.49390244,9.86956522 7.29288618,8.90217391 7.29288618,6.66304348 L7.29288618,3.39130435 C7.29288618,1.13043478 5.49390244,0.141304348 3.57642276,0.141304348 Z M22.3310976,6.67391304 L22.3310976,3.32608696 C22.3310976,2.11956522 24.4640244,1.83695652 25.1103659,3.05434783 L27.0817073,2.23913043 C26.3168699,0.510869565 24.8949187,0 23.7207317,0 C21.803252,0 19.9073171,1.13043478 19.9073171,3.32608696 L19.9073171,6.67391304 C19.9073171,8.88043478 21.803252,10 23.6776423,10 C24.8841463,10 26.3276423,9.39130435 27.1247967,7.81521739 L25.0134146,6.82608696 C24.4963415,8.17391304 22.3310976,7.84782609 22.3310976,6.67391304 Z M15.8030488,3.7826087 C15.0597561,3.61956522 14.5642276,3.34782609 14.5319106,2.88043478 C14.575,1.75 16.2878049,1.7173913 17.2896341,2.79347826 L18.8731707,1.55434783 C17.8821138,0.326086957 16.7617886,0 15.598374,0 C13.8424797,0 12.1404472,1 12.1404472,2.91304348 C12.1404472,4.77173913 13.5408537,5.76086957 15.0813008,6 C15.8676829,6.10869565 16.7402439,6.42391304 16.7186992,6.97826087 C16.654065,8.02173913 14.5426829,7.9673913 13.5839431,6.7826087 L12.0650407,8.23913043 C12.9591463,9.40217391 14.1764228,10 15.3182927,10 C17.074187,10 19.0239837,8.9673913 19.0993902,7.08695652 C19.2071138,4.69565217 17.5050813,4.09782609 15.8030488,3.7826087 Z M8.59634146,9.85869565 L11.0093496,9.85869565 L11.0093496,0.141304348 L8.59634146,0.141304348 L8.59634146,9.85869565 Z M49.2835366,0.141304348 L45.7071138,0.141304348 L45.7071138,4.22826087 L48.0878049,6.40217391 L48.0878049,2.43478261 L49.3589431,2.43478261 C50.1668699,2.43478261 50.5654472,2.83695652 50.5654472,3.4673913 L50.5654472,6.5 C50.5654472,7.13043478 50.1884146,7.55434783 49.3589431,7.55434783 L45.6963415,7.55434783 L45.6963415,9.85869565 L49.2727642,9.85869565 C51.1902439,9.86956522 52.9892276,8.90217391 52.9892276,6.66304348 L52.9892276,3.39130435 C53,1.13043478 51.2010163,0.141304348 49.2835366,0.141304348 Z M31.7353659,0 C29.753252,0 27.7819106,1.09782609 27.7819106,3.33695652 L27.7819106,6.66304348 C27.7819106,8.89130435 29.7640244,10 31.7569106,10 C33.7390244,10 35.7103659,8.89130435 35.7103659,6.66304348 L35.7103659,3.33695652 C35.7103659,1.10869565 33.7174797,0 31.7353659,0 Z M33.2865854,6.66304348 C33.2865854,7.35869565 32.5109756,7.7173913 31.7461382,7.7173913 C30.9705285,7.7173913 30.1949187,7.36956522 30.1949187,6.66304348 L30.1949187,3.33695652 C30.1949187,2.61956522 30.9489837,2.23913043 31.7030488,2.23913043 C32.4894309,2.23913043 33.2865854,2.58695652 33.2865854,3.33695652 L33.2865854,6.66304348 Z M44.3605691,3.33695652 C44.3067073,1.05434783 42.7770325,0.141304348 40.8056911,0.141304348 L36.9815041,0.141304348 L36.9815041,9.86956522 L39.4268293,9.86956522 L39.4268293,6.77173913 L39.8577236,6.77173913 L42.0768293,9.85869565 L45.0930894,9.85869565 L42.4861789,6.52173913 C43.6495935,6.15217391 44.3605691,5.14130435 44.3605691,3.33695652 Z M40.8487805,4.65217391 L39.4268293,4.65217391 L39.4268293,2.43478261 L40.8487805,2.43478261 C42.3784553,2.43478261 42.3784553,4.65217391 40.8487805,4.65217391 Z"]{fill: white;}
@@ -921,7 +1052,7 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 #friends .friends-table .friends-row .friends-column-status .status{border-radius:0px 0px 0px 0px!important;}#friends .friends-table .friends-row{border-radius:0px!important;}
 .avatar-small .status{border-radius:0px!important;}.userPopout-4pfA0d .status-3jUEha{border-radius:0px;}.user-popout .avatar-wrapper .avatar-popout .status, .avatar-popout, #user-profile-modal .avatar-wrapper .avatar-profile{border-radius:0px!important;}#user-profile-modal .avatar-wrapper .avatar-profile .status{border-radius:0px;}
 
-#friends .friends-table .friends-row .friends-column-status .status-text{color:rgba(255,255,255,0.8);}
+#friends .friends-table .friends-row .friends-column-status .status-text{color:rgba(255,255,255,0.8);transform:translateY(1px);}
 
 
 .channel-members .avatar-small .status, .private-channels .avatar-small .status, .account .avatar-small .status{box-shadow:0 0 0;}
@@ -964,7 +1095,7 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
       background-color: #faa61a;
 }
 
-/* Glowing Mention Box */
+/* Glowing Mention Box *
 .message-group .mentioned .message-text { -webkit-animation: mentionpulse 1s infinite; animation: mentionpulse s infinite; }
 @-webkit-keyframes mentionpulse { 0% { box-shadow: 0 0 3px 3px var(--main-color); }
   70% { box-shadow: 0 0 3px 3px var(--main-color); }
@@ -984,3 +1115,16 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 .message-group .avatar-large{margin-left:3px;}
 /*Status Everywhere plugin, squared off corners — cube_guy*
 .avatar-large .status{border-radius:0px;}
+*/
+
+/*Quiet & Discord Reborn — Check for Updates Button Position Fix — cube_guy*/
+.bd-updatebtn{transform:translate(-10px,-132.5px);}
+
+
+/*Circular Avatars with fixes from cube_guy*
+[class*="avatar-"], .status, [class*="avatarStatus"], .image-EVRGPw{border-radius: 50% !important;}
+.guilds [class*="avatar-"]{border-radius: 0 !important;}
+.mask-2vyqAW{border-radius: 50% !important;}
+.card-3cnrFh{border-radius:50%!important;}
+.ui-call-avatar{border-radius:50%!important;}
+.video-2vmmgZ{border-radius:50%!important;}
