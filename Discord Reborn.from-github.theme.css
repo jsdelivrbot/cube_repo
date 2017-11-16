@@ -1,0 +1,26 @@
+//META{"name":"Discord Reborn Customized","description":"A nice sleek transparent theme.","author":"Omniscient","version":"0.0"}*//
+
+/* IMPORT CSS FROM GITHUB */
+/*@import url("https://rawgit.com/0mniscient/Discord-Themes/master/css/Discord%20Reborn.css");*/
+@import url("https://rawgit.com/cubeguy/cube_repo/master/Discord%20Reborn.customized.theme.css");
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+IMPORTANT: CHANGE DISCORDS THEME TO DARK THEME IN APPEARANCE SETTINGS FOR THIS THEME TO WORK!
+---------------------------------------------------------------------------------------------------------------------------------------------
+===== CUSTOMIZABLE COLORS =====
+*/
+:root { 
+ --main-color: #0064B4;
+ --hover-color: #0064B4;
+ }
+/*
+---------------------------------------------------------------------------------------------------------------------------------------------
+TROUBLESHOOTING: IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
+---------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+
+.app, .callout-backdrop, .userPopout-4pfA0d::before { background-image: url("https://i.imgur.com/JDMsW3S.jpg") !important; background-size: cover !important;}
+
+/*Squared off corners for hover mask in User Popouts - cube_guy*/
+.mask-2vyqAW{border-radius: 0px !important;}
