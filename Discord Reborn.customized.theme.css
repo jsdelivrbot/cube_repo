@@ -64,7 +64,7 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 }
 /*Revert account details text in bottom left*/
 #app-mount .accountDetails-15i-_e {position:unset !important;min-width:unset !important;bottom:0px !important;}
-#app-mount .accountDetails-15i-_e .username {font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important;text-align:unset !important;height:30px!important;line-height:20px!important;transform: translate(16px,-2px);}
+#app-mount .accountDetails-15i-_e .username {font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important;text-align:unset !important;height:30px!important;line-height:20px!important;transform: translate(0px,-2px);}
 .accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
 .accountDetails-15i-_e .username{border-top: 0px;}
 
@@ -374,28 +374,19 @@ END CUSTOM CSS FOR CATEGORIES
 
 
 
-form .bf-toolbar{
-    transform: translate(-3px,-45px) !important;
-    
-}
+
 /*form .bf-toolbar{position:absolute !important;transform:translate(0px, -60px) !important;z-index:5;}*/
 
+/*Better Formatting Redux for Discord Reborn — cube_guy*/
+form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 .bf-toolbar .bf-arrow{right:1px !important;top:16px !important;background-color:rgba(0,0,0,0.4) !important;opacity:.5 !important;border-left:0px !important;border-right:0px !important;border-top:0px !important;z-index:1 !important;}
-
 .bf-toolbar.bf-visible .bf-arrow, .bf-toolbar.bf-hover:hover .bf-arrow{-webkit-transform:translate(12.5px,-3.5px)rotate(-90deg) !important;-ms-transform:translate(13px,-5px)rotate(-90deg) !important;transform:translate(13px,-5px)rotate(-90deg !important);width:46px !important;height:23px !important;opacity:.5 !important;border-top:0px solid #212121 !important;border-right:0px solid #212121 !important;border-bottom:0px solid #212121 !important;border-left:0px solid #19191b!important;z-index:0 !important;}
-
 .bf-toolbar:before{content:"";width:93% !important;background:rgba(0,0,0,0.2) !important;box-shadow:0px 0px 0px 0px #0a0a0a !important;border:0px solid #212121 !important;border-right:0px solid transparent !important;left:6px !important;border-radius: 0px;height:40px;}
-
 .bf-toolbar div:not(.bf-arrow):hover{background:rgb(32, 32, 32) !important;color:#fff !important;}
-
 .bd-detached-css-editor #bd-customcss-attach-controls button:active,.ui-standard-sidebar-view #bd-customcss-attach-controls button:active,.ui-standard-sidebar-view #editor-detached button:active{background:var(--hover-color) !important;}
-
 .ui-standard-sidebar-view #editor-detached button{background:var(--main-color) !important;}
-
 .bf-toolbar div:not(.bf-arrow){margin-top:-2px;}
-
 .bf-toolbar.bf-visible div:not(.bf-arrow), .bf-toolbar.bf-hover:hover div:not(.bf-arrow){z-index:2;}
-
 .bf-toolbar.bf-visible:before, .bf-toolbar.bf-hover:hover:before{-webkit-transform:translate(0,-4px)!important;-ms-transform:translate(0,-4px)!important;transform:translate(0,-4px) !important;z-index:1;}
 
 
