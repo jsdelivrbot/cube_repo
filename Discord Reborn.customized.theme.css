@@ -90,7 +90,8 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::after,.channel-members .member .avatar-small[style*="131903461771051009"] ~ .member-inner .member-username .member-username-inner::after{margin-left: 6px;padding: 1px 4px;border-radius: 3px;background: #0064B4;color: #fff;content: "The Legend of Link";vertical-align: bottom;text-transform: uppercase;font-weight: 600;font-size: 10px;line-height: 14px;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-shrink: 0;text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;}
 */
 /*Move Omni's ...icon*/
-.message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::before{transform:translateX(8px);}
+.message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::before{transform:translateX(45px);}
+.message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::after, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::after{line-height:14px;}
 /*
 ---------------------------------------------------------------------------------------------------------------------------------------------
 CUSTOM CSS FOR CATEGORIES
@@ -318,9 +319,17 @@ END CUSTOM CSS FOR CATEGORIES
     text-align: center;
     font-size: 12px;
     font-weight: 500;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     opacity: 0.9;
     padding-top: 8px;
+}
+
+/*Selected and Hovered Categories to Theme Colors*/
+.nameSelectedText-32NDX5, .nameSelectedVoice-XpjYTw{
+    color: var(--main-color);
+}
+.nameHoveredText-2FFqiz{
+    color: var(--hover-color)!important;
 }
 
 
@@ -378,7 +387,7 @@ END CUSTOM CSS FOR CATEGORIES
 /*read all messages button customization – cube_guy*/
 #RANbutton-frame{margin-bottom:0px !important;transform: translate(0px,0px);}
 
-#RANbutton-frame .guild-inner{width:76px !important;height:20px !important;border-radius:0% !important;margin-top:0px !important;margin-left:-13px !important;transition:.2s linear all;background-color: transparent !important;text-align: center;padding-left: 2px;}
+#RANbutton-frame .guild-inner{width:80px !important;height:20px !important;border-radius:0% !important;margin-top:0px !important;margin-left:-14px !important;transition:.2s linear all;background-color: transparent !important;text-align: center;padding-left: 2px;}
 
 #RANbutton-frame .guild-inner:hover{border-radius:0px !important;background-color:var(--main-color) !important;color: rgba(255, 255, 255, 1.0) !important;}
 
@@ -416,7 +425,11 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 .app .guilds>div.guild:first-child .badge{margin: 0px 0px 0px 0px !important;padding:50px 0px 0px 0px;border-radius: 0px !important;background-color: #19191b;border-bottom: 2px solid var(--main-color);transition: .1s background-color linear;color: rgba(0,0,0,0);}
 */
 /*Friends Online adjustment for Reborn*/
-.guilds-wrapper .guilds .friends-online{margin:-2px -13px;}
+.guilds-wrapper .guilds .friends-online{
+    margin:-2px -18px;
+    width: 80px;
+}
+
 
 
 .app .guilds>div.guild:first-child .badge{margin: 0px 2px 4px 0px !important;padding: 20px 38px 100px 35px;border-radius: 0px !important;background-color: rgba(255, 255, 255, 0.0);border-bottom: 2px solid var(--main-color);transition: .2s background-color linear;transform: translate(0px,4px);}
@@ -537,22 +550,22 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 
 /* Voice Connect OK To Main Color */
 .inner-ptMwR- .rtc-connection-status-connected {
-    color: var(--main-color); !important
+    color: var(--main-color) !important;
 }
 .inner-ptMwR- .rtc-connection-quality-fine .ping {
     background-image: url(https://i.imgur.com/RZCOtTu.png);
 }
 .buttonGreenFilled-6QHNrw {
-    background-color: var(--main-color); !important
+    background-color: var(--main-color) !important;
     color: #fff;
 }
 .buttonGreenFilledDefault-_lLQaz:hover {
-    background-color: var(--hover-color); !important
+    background-color: var(--hover-color) !important;
 }
 .ui-call-avatar-border.video.speaking {
-    -webkit-box-shadow: inset 0 0 0 2px #007dbd;
+    -webkit-box-shadow: inset 0 0 0 2px var(--main-color);
     border-radius: 3px;
-    box-shadow: inset 0 0 0 2px #007dbd;
+    box-shadow: inset 0 0 0 2px var(--hover-color);
 }
 
 
@@ -1063,7 +1076,7 @@ div[class*="titleBar-"] div:nth-of-type(4) {
         transform:translate(0px,10px);
 }
 
-/*remove radii for profiles, friends, friends grid boxes, statuses*/
+/*remove radius for profiles, friends, friends grid boxes, statuses*/
 div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .friends-table .friends-row .avatar-small{border-radius:0px;}
 #friends .friends-table .friends-row .friends-column-status .status{border-radius:0px 0px 0px 0px!important;}#friends .friends-table .friends-row{border-radius:0px!important;}
 .avatar-small .status{border-radius:0px!important;}.userPopout-4pfA0d .status-3jUEha{border-radius:0px;}.user-popout .avatar-wrapper .avatar-popout .status, .avatar-popout, #user-profile-modal .avatar-wrapper .avatar-profile{border-radius:0px!important;}#user-profile-modal .avatar-wrapper .avatar-profile .status{border-radius:0px;}
@@ -1076,7 +1089,7 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 
 
 /*Alternate Typing Indicator — cube_guy*/
-.status.status-typing.status-online{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;}.status.status-typing.status-idle{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #faa61a!important;}.status.status-typing.status-dnd{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #f04747!important;}.status.status-typing.status-invisible{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #747f8d!important;}.status.status-typing.status-offline{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #282829!important;}.status.status-typing .spinner-item{height:2px;widht:2px;border-radius:0px;}span.spinner{/*opacity:0!important;*/transform:translate(1px, 28px);height:1px;}
+.status.status-typing.status-online{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;}.status.status-typing.status-idle{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #faa61a!important;}.status.status-typing.status-dnd{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #f04747!important;}.status.status-typing.status-invisible{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #747f8d!important;}.status.status-typing.status-offline{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #282829!important;}.status.status-typing .spinner-item{height:2px;width:2px;border-radius:0px;}span.spinner{/*opacity:0!important;*/transform:translate(1px, 28px);height:1px;}
 
 
 
@@ -1144,3 +1157,63 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 .card-3cnrFh{border-radius:50%!important;}
 .ui-call-avatar{border-radius:50%!important;}
 .video-2vmmgZ{border-radius:50%!important;}
+/*Owner Tag Adjustments*/
+.kawaii-tag {
+    background: #7289da;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff!important;
+    margin-left: 6px;
+    padding: 1px 2px;
+    border-radius: 0px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    line-height: 14px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.compact .kawaii-tag {
+    margin: 0 3px 0 0;
+}
+
+.header-kawaii-tag {
+    line-height: 22px;
+}
+
+.kawaii-tag-bright {
+    color: #23272A!important;
+}
+
+.kawaii-tag-invert {
+    background: #fff;
+    color: #7289da!important;
+}
+
+/*Message Line-spacing*
+.message-group .comment .markup code.inline, .message-group .comment .markup{line-height: 14px !important;}
+
+
+
+/*Code Block Formatting*/
+code{
+    background-color: rgba(0,0,0,0.5)!important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 50%,transparent 50%)!important;
+}
+.theme-dark .message-group .comment .markup pre {
+    background: transparent !important;
+    border-color: transparent !important;
+}
+
+/*Remove Delay for Server Settings Popout Menu*/
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(1){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(2){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(3){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(4){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(5){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(6){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(7){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(8){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(9){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(10){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(11){animation-delay: 0ms!important;}
