@@ -35,9 +35,7 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 /*remove bottom right corner thing*/
 .channel-members::after {
     display: none;
-    transform: translate(0px,3px);
 }
-
 [class*="scroller-"].channel-members {
     height: 100%!important;/*
     height: 89.8%!important;*/
@@ -68,7 +66,12 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
 .accountDetails-15i-_e .username{border-top: 0px;}
 
+/*Revert Account Details*
+#app-mount .accountDetails-15i-_e { position:unset !important; min-width:unset !important; bottom:0px !important; }
+#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:400 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; }
+.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important; position: unset !important;}
 
+/*Removes Borders of Bottom Bar*/
 .theme-dark .container-iksrDt{
     width: calc(100% - 20px) !important;
     border-top: 0px !important;
@@ -86,9 +89,36 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 
 /*Daniel's tag  USER ID — 128948605263413248*/
 .message-group:not(.compact) .avatar-large[style*="128948605263413248"] ~ .comment .message h2 span.username-wrapper::after,.channel-members .member .avatar-small[style*="128948605263413248"] ~ .member-inner .member-username .member-username-inner::after{margin-left: 6px;padding: 1px 4px;border-radius: 3px;background: #de8237;color: #fff;content: "100% DINGUS";vertical-align: bottom;text-transform: uppercase;font-weight: 600;font-size: 10px;line-height: 14px;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-shrink: 0;text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;}
-/*
+/**/
 .message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::after,.channel-members .member .avatar-small[style*="131903461771051009"] ~ .member-inner .member-username .member-username-inner::after{margin-left: 6px;padding: 1px 4px;border-radius: 3px;background: #0064B4;color: #fff;content: "The Legend of Link";vertical-align: bottom;text-transform: uppercase;font-weight: 600;font-size: 10px;line-height: 14px;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-shrink: 0;text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;}
-*/
+.message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="131903461771051009"] ~ .member-inner .member-username .member-username-inner::before {
+    content: ".";
+    background-image: url(https://rawgit.com/cubeguy/cube_repo/master/icons/Triforce_Tag.png);
+    background-color: transparent;
+    background-size: 25px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    width: 266px;
+    color: transparent;
+    border-radius: 3px;
+    left: 174px;
+    right: 100px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 0px 4px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    line-height: 30px;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    text-shadow: 0px 1px 3px #000;
+    position: absolute;
+    margin-top: -1px;
+}
+.message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 .timestamp {
+    margin-left: 29px;
+}
+/**/
 /*Move Omni's ...icon*/
 .message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::before{transform:translateX(45px);}
 .message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::after, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::after{line-height:14px;}
@@ -1089,7 +1119,7 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 
 
 /*Alternate Typing Indicator — cube_guy*/
-.status.status-typing.status-online{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;}.status.status-typing.status-idle{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #faa61a!important;}.status.status-typing.status-dnd{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #f04747!important;}.status.status-typing.status-invisible{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #747f8d!important;}.status.status-typing.status-offline{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #282829!important;}.status.status-typing .spinner-item{height:2px;width:2px;border-radius:0px;}span.spinner{/*opacity:0!important;*/transform:translate(1px, 28px);height:1px;}
+.status.status-typing.status-online{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;}.status.status-typing.status-idle{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #faa61a!important;}.status.status-typing.status-dnd{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #f04747!important;}.status.status-typing.status-invisible{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #747f8d!important;}.status.status-typing.status-offline{width:30px!important;height:30px!important;background:transparent!important;margin:0px 0px 0px 0px;border:2px solid #282829!important;}.status.status-typing .spinner-item{height:2px;border-radius:0px;}span.spinner{/*opacity:0!important;*/transform:translate(1px, 28px);height:1px;}
 
 
 
@@ -1205,3 +1235,20 @@ code{
     border-color: transparent !important;
 }
 
+/*Remove Delay for Server Settings Popout Menu*/
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(1){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(2){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(3){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(4){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(5){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(6){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(7){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(8){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(9){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(10){animation-delay: 0ms!important;}
+.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item:nth-of-type(11){animation-delay: 0ms!important;}
+
+
+/** {
+    font-family: 'Segoe UI' !important;
+}*/
