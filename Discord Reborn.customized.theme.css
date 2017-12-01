@@ -1059,7 +1059,7 @@ div[class*="titleBar-"] div:nth-of-type(4) {
 
 
 /*Change Online Color to Main Color — cube_guy*/
-.status-online{border:4px solid var(--main-color)!important;}.channel-members .avatar-small .status-online, .private-channels .avatar-small .status-online, .account .avatar-small .status-online{border:2px solid var(--main-color)!important;}.friends-column.friends-column-status > .status-online{background-color:var(--main-color)!important;}.statusOnline-1Mp2_H{border-color:var(--main-color)!important;}.title > .status-online, [class*=titleText-] > .status-online{background:var(--main-color)!important;}
+.status-online{border:4px solid var(--main-color)!important;}.channel-members .avatar-small .status-online, .private-channels .avatar-small .status-online, .account .avatar-small .status-online{border:2px solid var(--main-color)!important;}.friends-column.friends-column-status > .status-online{background-color:var(--main-color)!important;}.statusOnline-1Mp2_H{border-color:var(--main-color)!important;}.statusOnlineProfile-2tnPUH{box-shadow:inset 0 0 0 3px var(--main-color)!important;}.title > .status-online, [class*=titleText-] > .status-online{background:var(--main-color)!important;}
 
 
 
