@@ -1222,7 +1222,18 @@ code{
 /*Citador Button Adjustments*/
 .replyer, .quoter, body .citar-btn{
     background-size: 150%!important;
+    width: 3px;
+    height: 8px;
     opacity: .2!important;
+    transform: translate(2px,5px);
+}
+.replyer, .quoter, body .citar-btn:hover{
+    background-size: 150%!important;
+    background-color: black!important;
+    width: 8px;
+    height: 12px;
+    opacity: .6!important;
+    transform: translate(0px,5px);
 }
 
 /*Remove Delay for Server Settings Popout Menu*/
