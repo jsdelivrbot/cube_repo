@@ -841,6 +841,12 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
     background: rgba(0, 0, 0, 0.65);
 }
 
+/*Profile Popout*/
+.topSectionPlaying-3jAH9b{
+    background: #242424;
+}
+
+
 /*title bar buttons and shit*/
 #app-mount {
     background-color: var(--main-color);
