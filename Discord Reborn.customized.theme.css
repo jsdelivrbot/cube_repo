@@ -821,21 +821,24 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 }
 
 
-/*user popout from Izy#5368*/
+/*user popout from Izy*/
 .userPopout-4pfA0d .headerNormal-1cioxU {background:rgba(0, 0, 0, 0.65)!important;background-image: url()!important;background-size: auto !important;}
 .headerStreaming-3F-wjT {background:rgba(0, 0, 0, 0.65)!important;background-image: url()!important;background-size: auto !important;}
 .headerLive-2dDMvp {border:1px solid rgb(89, 54, 149)!important;}
 .userPopout-4pfA0d {border-radius: 0px!important;}
 .userPopout-4pfA0d::before {filter: blur(0px)!important;}
 [class*="userPopout-"] .status-3jUEha {
-    bottom: -4px !important;
-    right: -4px !important;
+    bottom: 0px !important;
+    right: 0px !important;
 }
 .mask-2vyqAW {
     -webkit-mask: none!important;
 }
 .image-EVRGPw {
     border-radius: 0px;
+}
+.headerPlaying-2eYqm9{
+    background: rgba(0, 0, 0, 0.65);
 }
 
 /*title bar buttons and shit*/
