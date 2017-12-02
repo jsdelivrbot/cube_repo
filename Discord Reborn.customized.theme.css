@@ -620,6 +620,21 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
     background: rgba(0,0,0,0.2);
 }
 
+/*Activity bottom bar*/
+.theme-dark .activityFeed-HeiGwL::after{
+    border-top: 0px !important;
+    width: 2000px !important;
+}
+/*Activity Screen Height*/
+.feed-2fHzeU {
+    height: calc(100% - 90px) !important;
+}
+/*Activity adjustments*/
+.chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-']:after, #friends [class*='flex-'] [class*='flex-']:last-of-type:after, [class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type:after{
+    height: 0px !important;
+}
+
+
 /*moves 'typing' ellipsis up to be aligned properly*
 .typing .ellipsis{margin-top:0px;}
 .chat .content form > .typing{position: fixed;bottom: 20px;left: 5%;}
@@ -845,6 +860,13 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 .topSectionPlaying-3jAH9b{
     background: #242424;
 }
+.tabBarContainer-3RVZc- {
+    padding-left: 0px;
+}
+.tab-bar.TOP {
+    border-bottom: 1px solid var(--hover-color);
+    padding-left: 20px;
+}
 
 
 /*title bar buttons and shit*/
@@ -967,11 +989,7 @@ div[class*="titleBar-"] div:nth-of-type(4) {
     transform: translate(-6px,0px);
 }
 
-.chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-'],
-#friends [class*='flex-'] [class*='flex-']:last-of-type,
-[class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type {
-    margin-right: 98px;
-}
+
 .chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-']:after,
 #friends [class*='flex-'] [class*='flex-']:last-of-type:after,
 [class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type:after {
@@ -1288,3 +1306,11 @@ code{
 .guilds-wrapper .guilds-add:hover .guilds-add-inner::after{content:"Add/Create Server";font-size: 18px; display: initial !important;}
 .guilds-wrapper .guilds {padding: 0px 0px 20px 14px !important;}
 /**/
+/*Friends Table Full Height*
+#friends .friends-table .friends-table-body {
+    height: calc(100% - 20px);
+}
+/*Activity Screen Full Height*
+.feed-2fHzeU {
+    height: calc(100% - 20px) !important;
+}
