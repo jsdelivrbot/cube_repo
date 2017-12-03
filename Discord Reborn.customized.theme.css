@@ -630,8 +630,23 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
     height: calc(100% - 90px) !important;
 }
 /*Activity adjustments*/
+.theme-dark .card-2WxYqG{
+    border-color: transparent;
+}
 .chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-']:after, #friends [class*='flex-'] [class*='flex-']:last-of-type:after, [class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type:after{
     height: 0px !important;
+}
+.theme-dark .partyBottomBorder-EvU-Qp{
+    background-color: transparent !important;
+}
+.theme-dark .sectionLine-3fsQAf{
+    background-color: transparent !important;
+}
+.partyBottomPadding-1yML13{
+    padding-bottom: 20px !important;
+}
+.partyBottomBorder-EvU-Qp{
+    height: 0px;
 }
 
 
