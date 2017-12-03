@@ -867,7 +867,9 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
     border-bottom: 1px solid var(--hover-color);
     padding-left: 20px;
 }
-
+.listAvatar-MpHQ5z{
+    background: transparent !important;
+}
 
 /*title bar buttons and shit*/
 #app-mount {
@@ -1165,12 +1167,18 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 /*removes background of mentions*/
 .theme-dark .message-group .comment .markup .mention{background:transparent!important;}
 
-
 /* Custom DM Icon */
 .friends-icon {
     background-image: url(https://rawgit.com/cubeguy/cube_repo/master/icons/Triforce.png)!important;
     transform:translateY(-2px);
 }
+
+
+/*AKA Main Color*/
+.aka-2Ba14Z {
+    background: var(--main-color);
+}
+
 
 /*Fixes Status Everywhere plugin compatibility for Quiet and Discord Reborn — cube_guy*
 .message-group .avatar-large{margin-left:3px;}
@@ -1223,8 +1231,10 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 }
 
 /*Message Line-spacing*
-.message-group .comment .markup code.inline, .message-group .comment .markup{line-height: 14px !important;}
-
+.message-group .comment .markup code.inline, .message-group .comment .markup{line-height: 14px !important;}/**/
+#bd-settings-sidebar span[style*='font-size: 12px;'] {
+    display: none;
+}
 
 
 /*Code Block Formatting*/
@@ -1235,6 +1245,14 @@ code{
 .theme-dark .message-group .comment .markup pre {
     background: transparent !important;
     border-color: transparent !important;
+}
+
+/*Edit Message Border Color*/
+.textAreaEdit-1qc9VQ{
+    box-shadow: 0px 0px 6px 0px var(--main-color) !important; 
+}
+.theme-dark .edit-message .emojiButton-38mF6t{
+    top: 26px !important;
 }
 
 /*Citador Button Adjustments*/
@@ -1313,4 +1331,26 @@ code{
 /*Activity Screen Full Height*
 .feed-2fHzeU {
     height: calc(100% - 20px) !important;
+}
+/*Title Bar Spacing Fix*/
+#app-mount .titleWrapper-3Vi_wz > div{
+    margin-right: 90px !important;
+}
+
+/*Quick Message Border Color*/
+.theme-dark .quickMessage-28pD5Y {
+    border-color: var(--main-color);
+}
+
+/*Change Friends Icon*/
+.private-channels .channel.btn-friends svg  g {
+    opacity: 0;
+}
+#app-mount a[href*='/channels/@me'] svg {
+    background: url(http://svgshare.com/i/405.svg) center center no-repeat rgba(18, 18, 19, 0) !important;
+}
+
+/*Changed Activity Feed Icon*/
+#app-mount a[href*='/activity'] svg {
+    background: url('data:image/svg+xml;charset=UTF-8,<svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M15 7.5V2H9v5.5l3 3 3-3zM7.5 9H2v6h5.5l3-3-3-3zM9 16.5V22h6v-5.5l-3-3-3 3zM16.5 9l-3 3 3 3H22V9h-5.5z"/></svg>') center center no-repeat rgba(18, 18, 19, 0) !important;
 }
