@@ -1336,6 +1336,19 @@ code{
 #app-mount .titleWrapper-3Vi_wz > div{
     margin-right: 90px !important;
 }
+#friends > .headerBar-cxbhPD{
+    margin-right: -50px !important;
+}
+#friends > .headerBar-cxbhPD::after{
+    content: "";
+    background: rgba(0,0,0,0.75);
+    width: 140px;
+    height: 48px;
+    bottom: 0px;
+    position: relative;
+    border-bottom: 2px solid var(--main-color);
+    transform: translate(147.75px,0px);
+}
 
 /*Quick Message Border Color*/
 .theme-dark .quickMessage-28pD5Y {
