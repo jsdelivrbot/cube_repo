@@ -851,7 +851,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 }
 
 
-/*user popout from Izy*/
+/*User Pppout*/
 .userPopout-4pfA0d .headerNormal-1cioxU {background:rgba(0, 0, 0, 0.65)!important;background-image: url()!important;background-size: auto !important;}
 .headerStreaming-3F-wjT {background:rgba(0, 0, 0, 0.65)!important;background-image: url()!important;background-size: auto !important;}
 .headerLive-2dDMvp {border:1px solid rgb(89, 54, 149)!important;}
@@ -872,6 +872,10 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 }
 .headerTop-1QGMLs{
     background-image: url() !important;
+    background-color: transparent !important;
+}
+.activity-AFBUEw{
+    background-color: transparent !important;
 }
 
 /*Profile Popout*/
@@ -1371,4 +1375,12 @@ code{
 /*Quick Message Border Color*/
 .theme-dark .quickMessage-28pD5Y {
     border-color: var(--main-color);
+}
+
+/*User Popout*/
+.headerTop-1QGMLs{
+    background-color: transparent !important;
+}
+.activity-AFBUEw{
+    background-color: transparent !important;
 }
