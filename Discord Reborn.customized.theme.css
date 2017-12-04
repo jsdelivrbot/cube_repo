@@ -1372,18 +1372,3 @@ code{
 .theme-dark .quickMessage-28pD5Y {
     border-color: var(--main-color);
 }
-
-.header-1tSljs{
-    height: 47px !important;
-}
-
-/*Fix Direct Messages Status Position*/
-.channel-members .avatar-small .status, .private-channels .avatar-small .status, .account .avatar-small .status{
-    top: -1px;
-    left: -1px;
-}
-/**/
-.avatar-small .status {
-    right: -1px;
-    bottom: -1px;
-}
