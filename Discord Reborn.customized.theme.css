@@ -1399,3 +1399,13 @@ code{
 .activity-AFBUEw{
     background-color: transparent !important;
 }
+
+/*Revert Bottom Left Buttons Stupid Positioning*/
+.button-1aU9q1 {
+    width: 20px;
+    right: 0px;
+    margin-right: 0px;
+}
+.accountDetails-15i-_e + div div{
+    margin-left: 6px !important;
+}
