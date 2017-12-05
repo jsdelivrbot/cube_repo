@@ -869,6 +869,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 }
 .headerPlaying-2eYqm9{
     background: rgba(0, 0, 0, 0.65);
+    background-image: url() !important;
 }
 .headerTop-1QGMLs{
     background-image: url() !important;
@@ -1383,4 +1384,19 @@ code{
     position: relative;
     border-bottom: 2px solid var(--main-color);
     transform: translate(147.75px,0px);
+}
+
+
+
+/*Quick Message Border Color*/
+.theme-dark .quickMessage-28pD5Y {
+    border-color: var(--main-color);
+}
+
+/*User Popout*/
+.headerTop-1QGMLs{
+    background-color: transparent !important;
+}
+.activity-AFBUEw{
+    background-color: transparent !important;
 }
