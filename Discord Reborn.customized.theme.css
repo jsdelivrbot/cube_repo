@@ -32,6 +32,11 @@ IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
 body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:0px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 3s ease;animation:version 3s ease;-webkit-animation-delay:4s;animation-delay:4s;}
 
 
+/*Revert account details text in bottom left*/
+#app-mount .accountDetails-15i-_e {position:unset !important;min-width:unset !important;bottom:0px !important;}
+#app-mount .accountDetails-15i-_e .username {font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important;text-align:unset !important;height:30px!important;line-height:20px!important;transform: translate(16px,-2px);}
+.accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
+.accountDetails-15i-_e .username{border-top: 0px;}
 /*remove bottom right corner thing*/
 .channel-members::after {
     display: none;
@@ -42,6 +47,15 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 }
 .private .channelTextArea-os01xC {
     margin: 20px 0 32px 0!important
+}
+/*Revert Bottom Left Buttons' Stupid Positioning*/
+.button-1aU9q1 {
+    width: 20px;
+    right: 0px;
+    margin-right: 0px;
+}
+.accountDetails-15i-_e + div div{
+    margin-left: 6px !important;
 }
 
 /*Name size*
@@ -60,11 +74,6 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .accountDetails-15i-_e .discriminator {
     color: transparent;
 }
-/*Revert account details text in bottom left*/
-#app-mount .accountDetails-15i-_e {position:unset !important;min-width:unset !important;bottom:0px !important;}
-#app-mount .accountDetails-15i-_e .username {font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important;text-align:unset !important;height:30px!important;line-height:20px!important;transform: translate(16px,-2px);}
-.accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
-.accountDetails-15i-_e .username{border-top: 0px;}
 
 /*Revert Account Details*
 #app-mount .accountDetails-15i-_e { position:unset !important; min-width:unset !important; bottom:0px !important; }
@@ -1400,12 +1409,54 @@ code{
     background-color: transparent !important;
 }
 
-/*Revert Bottom Left Buttons Stupid Positioning*/
-.button-1aU9q1 {
-    width: 20px;
-    right: 0px;
-    margin-right: 0px;
+/*DM notification*/
+.dms:not(:empty)::before {
+    content: 'You\'ve received a new Direct Message.';
+    pointer-events: none;
+    background: url('https://bearddesign.s-ul.eu/Dr2CyE1L.svg') no-repeat;
+    background-size: 64px 64px;
+    background-position: 7px 7px;
+    position: fixed;
+    z-index: 999999999;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 20px;
+    color: #fff;
+    line-height: 1.3;
+    background-color: #19191b;
+    border-radius: 2px;
+    padding-left: 95px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    width: 375px;
+    height: 80px;
+    margin: 0px;
+    bottom: 35px;
+    right: 40px;
+    border: 1px solid var(--main-color);
+    -webkit-box-shadow: 0 0 5px var(--main-color), inset 0 0 5px var(--main-color);
+    -webkit-transform-style: preserve-3d;  
+    -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s, glow3 800ms ease-out infinite alternate;
 }
-.accountDetails-15i-_e + div div{
-    margin-left: 6px !important;
+
+.dms:not(:empty)::after {
+    content: 'Maybe respond to it, I don''t know, do what you want.';
+    pointer-events: none;
+    position: fixed;
+    font-size: 11px;
+    z-index: 9999999999;
+    height: auto;
+    color: #898395;
+    margin: 0;
+    bottom: 60px;
+    width: 255px;
+    padding-right: 30px;
+    right: 34px;
+    -webkit-transform-style: preserve-3d;  
+    -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s;
 }
