@@ -437,12 +437,15 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 }
 
 
-
+/*DM Notification Icons*/
 .app .guilds>div.guild:first-child .badge{margin: 0px 2px 4px 0px !important;padding: 20px 38px 100px 35px;border-radius: 0px !important;background-color: rgba(255, 255, 255, 0.0);border-bottom: 1px solid var(--main-color);transition: .2s background-color linear;transform: translate(0px,4px);}
-
 .app .guilds .guild:first-child{
-    height: 47px;
-    transform: translate(0px,-3px);
+    transform: translate(0px,-1px);
+    border-radius: 0px !important;
+    background: rgba(0, 0, 0, 0) !important;
+}
+.dms .guild .guild-inner:first-child{
+    border-radius: 0px !important;
 }
 
 /*.guilds-wrapper .guilds .guild.active:first-of-type .guild-inner{
