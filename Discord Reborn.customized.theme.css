@@ -49,14 +49,7 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
     margin: 20px 0 32px 0!important
 }
 /*Revert Bottom Left Buttons' Stupid Positioning*/
-.button-1aU9q1 {
-    width: 24px;
-    right: 0px;
-    margin-right: 0px;
-}
-.accountDetails-15i-_e + div div{
-    margin-left: 0px !important;
-}
+.accountDetails-15i-_e + div div {margin-left: 0px !important;}
 
 /*Name size*
 #app-mount .accountDetails-15i-_e {
@@ -104,7 +97,7 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::before{transform:translateX(45px);}
 .message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::after, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::after{line-height:14px;}
 /*Remove Omni's ...icon*/
-.message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::before{background-size: 0px;}
+.message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::before{display: none;}
 /*
 ---------------------------------------------------------------------------------------------------------------------------------------------
 CUSTOM CSS FOR CATEGORIES
