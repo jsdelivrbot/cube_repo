@@ -50,12 +50,12 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 }
 /*Revert Bottom Left Buttons' Stupid Positioning*/
 .button-1aU9q1 {
-    width: 20px;
+    width: 24px;
     right: 0px;
     margin-right: 0px;
 }
 .accountDetails-15i-_e + div div{
-    margin-left: 6px !important;
+    margin-left: 0px !important;
 }
 
 /*Name size*
@@ -94,7 +94,6 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
     border-left: 0px !important;
     border-right: 0px !important;
 }
-
 
 /*Daniel's tag  USER ID — 128948605263413248*/
 .message-group:not(.compact) .avatar-large[style*="128948605263413248"] ~ .comment .message h2 span.username-wrapper::after,.channel-members .member .avatar-small[style*="128948605263413248"] ~ .member-inner .member-username .member-username-inner::after{margin-left: 6px;padding: 1px 4px;border-radius: 3px;background: #de8237;color: #fff;content: "100% DINGUS";vertical-align: bottom;text-transform: uppercase;font-weight: 600;font-size: 10px;line-height: 14px;-ms-flex-negative: 0;flex-shrink: 0;-webkit-flex-shrink: 0;text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;}
@@ -490,73 +489,25 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 }
 
 /*Squared off stuff*/
-.badge{border-radius:0px;}
-
-#friends .tab-bar .tab-bar-item{border-radius:0px;}
-
-.private-channels .channel a{border-radius:0px;}
-
-.search-bar .search-bar-inner{border-radius:0px;}
-
-.search .search-bar{border-radius:0px;}
-
-.guild-inner{border-radius:0px!important;}
-.dms .guild .guild-inner:first-child{border-radius:0px!important;}
-.guilds-wrapper .guilds .guild.unread:before{border-radius:0px;}
-.guilds-wrapper .guilds .guild.selected:before, .guilds-wrapper .guilds .guild.unread:before{border-radius:0px;}
-.guilds-wrapper .guilds-add{border-radius:0px;}
-
-.content-2mSKOj{border-radius:0px;}
-.unread-23Kvxk{border-radius:0px;}
-
-.mention{border-radius:0px;}
-.message-group .mentioned .message-text:after{border-radius:0px 0 0 0px;}
-
-.tooltip{border-radius:0px;}
-
-.modal-3HOjGZ{border-radius:0px;}
-
-.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item .popout-menu-icon{border-radius:0px;}
-.popout.popout-bottom:not(.no-arrow) .popout-menu .popout-menu-item .popout-menu-item-label{border-radius:0px;}
-
-.avatarDefault-3jtQoc, .avatarSpeaking-3teDH6{border-radius:0px;}
-.guilds-wrapper .guilds .guild.audio .guild-inner:after, .guilds-wrapper .guilds .guild.video .guild-inner:after{border-radius:0px;}
-
-#user-profile-modal .guilds .guild .avatar-large:empty{border-radius:0px!important;}
-
-.spinner-pulsing-ellipsis .spinner-item{border-radius:0px;height:4px;}
-
-#friends .friends-table .friends-row .friends-column-actions .friends-action{border-radius:0px;}
-
-#user-profile-modal .btn{border-radius:0px;}
-
-.context-menu{border-radius:0px;background:rgba(0,0,0,0.7);}
-.theme-dark.context-menu{background:rgba(0,0,0,0.7);}
-.theme-dark.context-menu .item-subMenu{background:rgba(0,0,0,0.8);}
-.theme-dark.context-menu .item-subMenu:hover{background:rgba(0,0,0,0.9);}
-.theme-dark.context-menu .context-menu{background:rgba(0,0,0,0.5);}
-
-.mask-2vyqAW{border-radius: 0px !important;}
-
-.theme-dark .message-group .embed{border-radius:0px!important;}
-.embed-wrapper .embed-color-pill{border-radius:0px;}
-
-#user-profile-modal .guilds .section .connected-accounts .connected-account{border-radius:0px;}
-
-.channel-members .member:hover{border-radius:0px;}
-
-.status-picker .popout-menu-item{border-radius:0px;}
-.status-picker .popout-menu-item{transform:translate(4px,-4px);}
-
-.chat .messages.scroller::-webkit-scrollbar-thumb, .chat .messages.scroller::-webkit-scrollbar-track-piece {
-    border-radius: 0 !important;
-}
 *::-webkit-scrollbar-thumb, *::-webkit-scrollbar-track-piece {
     border-radius: 0 !important;
 }
-
 *{border-radius:0!important}
 *::after, *::before, * {border-radius: 0 !important;}
+
+
+/*Profile Roles*/
+.role-3rahR_ {
+    -webkit-box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 11px;
+    box-sizing: border-box;
+    height: 22px;
+    margin: 0 4px 4px 0;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
 
 /*Speaking  Indicator Colour to Main Color*/
 .ui-call-avatar-border.voice.speaking{box-shadow:inset 0 0 0 3px var(--main-color);}
@@ -1442,6 +1393,7 @@ code{
     -webkit-box-shadow: 0 0 5px var(--main-color), inset 0 0 5px var(--main-color);
     -webkit-transform-style: preserve-3d;  
     -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s, glow3 800ms ease-out infinite alternate;
+    /*display: none;*/
 }
 
 .dms:not(:empty)::after {
@@ -1459,4 +1411,5 @@ code{
     right: 34px;
     -webkit-transform-style: preserve-3d;  
     -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s;
+    /*display: none;*/
 }
