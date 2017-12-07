@@ -849,8 +849,8 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
     border-bottom: 1px solid var(--hover-color);
     padding-left: 20px;
 }
-.listAvatar-MpHQ5z{
-    background: transparent !important;
+#friends .friends-table .friends-row .friends-column-guilds .avatar-small{
+    background-color: transparent !important;
 }
 
 /*title bar buttons and shit*/
