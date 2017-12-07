@@ -1397,7 +1397,7 @@ code{
     -webkit-box-shadow: 0 0 5px var(--main-color), inset 0 0 5px var(--main-color);
     -webkit-transform-style: preserve-3d;  
     -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s, glow3 800ms ease-out infinite alternate;
-    /*display: none;*/
+    display: none;
 }
 
 .dms:not(:empty)::after {
@@ -1415,5 +1415,11 @@ code{
     right: 34px;
     -webkit-transform-style: preserve-3d;  
     -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s;
-    /*display: none;*/
+    display: none;
+}
+
+
+/*Settings Item Selected Colour*/
+.side-2nYO0F .itemSelected-3XxAMf{
+    background-color: var(--hover-color);
 }
