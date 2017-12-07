@@ -1273,10 +1273,10 @@ code{
 }*/
 
 
-/*cube_guy's Triforce Tag*/
+/*cube_guy's Triforce Tag*
 .message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::before{
     content: "`";
-    background-image: url(https://rawgit.com/cubeguy/cube_repo/master/icons/Triforce_Tag.png);
+    background-image: url(https://rawgit.com/cubeguy/cube_repo/master/icons/Discord_Tag.png);
     background-size: 25px;
     background-position: 0px 0px;
     background-repeat: no-repeat;
@@ -1359,6 +1359,10 @@ code{
 .activity-AFBUEw{
     background-color: transparent !important;
 }
+.userPopout-4pfA0d, .userPopout-4pfA0d::before,.theme-dark .quickMessage-28pD5Y,.userPopout-4pfA0d .footer-2J5zqP,.userPopout-4pfA0d .headerNormal-1cioxU,.userPopout-4pfA0d .headerStreaming-3F-wjT,.buttonWhiteOutlined-2KwPTg,.headerPlaying-2eYqm9{
+    border-radius: 0px !important;
+}
+
 
 /*DM notification*/
 .dms:not(:empty)::before {
