@@ -854,49 +854,54 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 }
 
 /*title bar buttons and shit*/
-#app-mount {
-    background-color: var(--main-color);
-}
-
-#app-mount .titleBar-3_fDwJ {
-    padding-top: 2px !important;
-    background-color: var(--main-color) !important;
-}
-
-#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa {
-    margin: auto 0;
-    margin-right: 10px;
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    background-color: transparent;
-}
-
-#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 {
-    margin: auto 0;
-    margin-right: 10px;
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    background-color: transparent;
-}
-
-#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 + .winButtonMinMax-bT_gQ1 {
-    margin: auto 0;
-    margin-right: 10px;
-    width: 14px;
-    height: 14px;
-    border-radius: 100%;
-    background-color: transparent;
-}
-
-#app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 + .winButtonMinMax-bT_gQ1 svg, #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa svg, #app-mount .titleBar-3_fDwJ .winButtonClose-2rIvsa + .winButtonMinMax-bT_gQ1 svg, #app-mount .titleBar-3_fDwJ .wordmark-2L03Wr svg {
-    display: unset;
-}
+/* OLD TITLE BAR -*/
+div[class*="titleBar-"] {  height: 0px;margin-top: 0px;}
+div[class*="titleBar-"]:before {content: ''; position: absolute; left: 0; right: 0; top: 6px;height:
+ 16px; z-index: 3002;-webkit-app-region: drag;}
+div[class*="titleBar-"]:after {
+    content: '';position: absolute;
+    left: 0; right: 0;
+    top: 0 !important;
+    height: 0px;  z-index: 3002;}
+div[class*="wordmark-"], div[class*="winButton-"] svg { display: none;}
+div[class*="winButton-"] {
+    top: 9px;height: 30px;width: 30px; right: 8px;
+    background-position: center;opacity: .6;transition: 200ms ease;}
+div[class*="winButton-"]:hover{
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-color: var(--hover-color) !important;
+    border-radius: 10px;opacity: 1;}
+div[class*="titleBar-"] div:nth-of-type(2) {
+    background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/close.svg) !important;  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px important;;}
+div[class*="titleBar-"] div:nth-of-type(3) {
+    background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/fullscreen.svg) !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;}
+div[class*="titleBar-"] div:nth-of-type(4) {
+    background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/remove.svg) !important;
+    background-repeat: no-repeat;
+    background-position: center 7px;
+    background-size: 24px;}
+.chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-']:after,
+#friends [class*='flex-'] [class*='flex-']:last-of-type:after,
+[class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type:after {
+display:none !important;}
 
 /*gray top of title bar fix*/
 div[class*="titleBar-"]:after{height:0px!important;}
 
+.typeWindows-15E0Ys::after{background-image: url();}
+
+/*Makes it into a 2px blue line to match the one below the title bar*/
+div[class*="titleBar-"]:after{height:2px!important;background-color: var(--main-color) !important;}
+
+/*adjust guild margin*/
+.app .guilds .guild:first-child {margin-top: 2px!important;padding-bottom:0px !important}
 /*
 .title-qAcLxz {box-shadow: 0 0px 0 transparent !important;}
 
@@ -907,94 +912,14 @@ div[class*="titleBar-"]:after{height:0px!important;}
 .chat .divider.divider-red > span {color:var(--main-color) !important;}
 
 
-/* OLD TITLE BAR - By intrnl, modified by Raiju*/
-div[class*="titleBar-"] {
-    height: 0px;
-    margin-top: 0px;
-}
-div[class*="titleBar-"]:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 6px;
-    height: 14px;
-    z-index: 3002;
-    -webkit-app-region: drag;
-}
-div[class*="titleBar-"]:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 6px;
-    z-index: 3002;
-}
-div[class*="wordmark-"], div[class*="winButton-"] svg {
-    display: none;
-}
-div[class*="winButton-"] {
-    top: 15px;
-    height: 30px;
-    width: 30px;
-    right: 8px;
-    background-position: center;
-    opacity: .6;
-    transition: 200ms ease;
-}
-div[class*="winButton-"]:hover{
-	-webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    
-    background-color: var(--hover-color) !important;
-	border-radius: 10px;
-    opacity: 1;
-}
-div[class*="titleBar-"] div:nth-of-type(2) {
-	background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/close.svg) !important;  
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50px;
-    transform: translate(-6px,0px);
-}
-div[class*="titleBar-"] div:nth-of-type(3) {
-    background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/fullscreen.svg) !important;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50px;
-    transform: translate(-6px,0px);
-}
-div[class*="titleBar-"] div:nth-of-type(4) {
-    background-image: url(https://cdn.rawgit.com/Zerthox/ClearVision/master/icons/remove.svg) !important;
-	background-repeat: no-repeat;
-	background-position: center 7px;
-	background-size: 50px;
-    transform: translate(-6px,0px);
-}
 
-
-.chat [class*='titleWrapper-'] [class*='flex-'] [class*='flex-']:after,
-#friends [class*='flex-'] [class*='flex-']:last-of-type:after,
-[class*='activityFeed-'] [class*='flex-'] [class*='flex-']:last-of-type:after {
-    content: '';
-    width: 1px;
-    height: 22px;
-    background-color: hsla(240,6%,97%,.1);
-}
-/* OLD TITLE BAR */
-/*adjust guild margin*/
-.app .guilds .guild:first-child {margin-top: 4px!important;padding-bottom:0px !important}
-
-
-
-/*It only works for Nitro users that have a GIF avatar. If you are Nitro and don't have a GIF avatar then it won't see you as a Nitro user*/
+/*only works for Nitro users that have a GIF avatar*/
 .message-group:not(.compact) .avatar-large[style*="/a_"] ~ .comment .body h2:before{content:"nitro";position:relative;margin:0 0 0 5px;padding:3px 4px 2px 3px;color:#fff;font-size:10px;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);text-transform:uppercase;background-color: #7289DA;font-weight: 600;border-radius:3px;order:2;height:100%;top: 4px !important;}
 
 
 
 
-/* Online Minimal 
+/*Member List Minimal
 .channel-members{
     transform:translate(145px);
     z-index:2;
@@ -1057,7 +982,7 @@ div[class*="titleBar-"] div:nth-of-type(4) {
     height: calc(100% - 70px);
     border-bottom: 2px solid #212121;
 }
-*/
+/**/
 
 
 /*Change Online Color to Main Color — cube_guy*/
