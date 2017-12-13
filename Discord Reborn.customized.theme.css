@@ -31,12 +31,16 @@ IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
 */
 body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:0px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 3s ease;animation:version 3s ease;-webkit-animation-delay:4s;animation-delay:4s;}
 
-
 /*Revert account details text in bottom left*/
 #app-mount .accountDetails-15i-_e {position:unset !important;min-width:unset !important;bottom:0px !important;}
 #app-mount .accountDetails-15i-_e .username {font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important;text-align:unset !important;height:30px!important;line-height:20px!important;transform: translate(16px,-2px);}
 .accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
 .accountDetails-15i-_e .username{border-top: 0px;}
+/*Revert account details text — vanilla *
+#app-mount .accountDetails-15i-_e { position:unset !important; min-width:unset !important; bottom:0px !important; }
+#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:400 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; }
+.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important; position: unset !important;}
+.accountDetails-15i-_e + div div{margin-left:unset !important;}
 /*remove bottom right corner thing*/
 .channel-members::after {
     display: none;
@@ -1197,7 +1201,10 @@ code{
     font-family: 'Segoe UI' !important;
 }*/
 
-
+/*Remove box shadow from avatars in chat*
+.message-group .avatar-large{
+    box-shadow: 0px 0px 0px 0px !important;
+}
 /*cube_guy's Triforce Tag*
 .message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::before{
     content: "`";
@@ -1215,6 +1222,9 @@ code{
     flex-shrink: 0;
     position: relative;
     margin-left: -28px;
+}
+.message-group .avatar-large[style*="131903461771051009"]{
+    box-shadow: 0px 0px 0px 0px !important;
 }
 .message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 .timestamp {
     margin-left: 4px;
@@ -1341,10 +1351,4 @@ code{
     -webkit-transform-style: preserve-3d;  
     -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s;
     display: none;
-}
-
-
-/*Settings Item Selected Colour*/
-.side-2nYO0F .itemSelected-3XxAMf{
-    background-color: var(--hover-color);
 }
