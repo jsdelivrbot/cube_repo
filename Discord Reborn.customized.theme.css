@@ -37,10 +37,11 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
 .accountDetails-15i-_e .username{border-top: 0px;}
 /*Revert account details text — vanilla *
-#app-mount .accountDetails-15i-_e { position:unset !important; min-width:unset !important; bottom:0px !important; }
-#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:400 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; }
-.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important; position: unset !important;}
+#app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;}
+#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:400 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; text-shadow: 0.5px 0.5px 2px black!important; }
+.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;}
 .accountDetails-15i-_e + div div{margin-left:unset !important;}
+.accountDetails-15i-_e .username {background-color: transparent !important;}
 /*remove bottom right corner thing*/
 .channel-members::after {
     display: none;
@@ -71,11 +72,6 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .accountDetails-15i-_e .discriminator {
     color: transparent;
 }
-
-/*Revert Account Details*
-#app-mount .accountDetails-15i-_e { position:unset !important; min-width:unset !important; bottom:0px !important; }
-#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:400 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; }
-.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important; position: unset !important;}
 
 /*Removes Borders of Bottom Bar*/
 .theme-dark .container-iksrDt{
@@ -1172,7 +1168,7 @@ code{
     width: 3px;
     height: 8px;
     opacity: .2!important;
-    transform: translate(2px,5px);
+    transform: translate(0px,5px);
 }
 .replyer, .quoter, body .citar-btn:hover{
     background-size: 150%!important;
@@ -1180,7 +1176,7 @@ code{
     width: 8px;
     height: 12px;
     opacity: .6!important;
-    transform: translate(0px,5px);
+    transform: translate(-4px,5px);
 }
 
 /*Remove Delay for Server Settings Popout Menu*/
