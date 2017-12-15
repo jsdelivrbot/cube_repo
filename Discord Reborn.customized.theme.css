@@ -32,10 +32,11 @@ IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
 body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:0px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 3s ease;animation:version 3s ease;-webkit-animation-delay:4s;animation-delay:4s;}
 
 /*Revert account details text in bottom left*/
-#app-mount .accountDetails-15i-_e {position:unset !important;min-width:unset !important;bottom:0px !important;}
-#app-mount .accountDetails-15i-_e .username {font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important;text-align:unset !important;height:30px!important;line-height:20px!important;transform: translate(16px,-2px);}
-.accountDetails-15i-_e .discriminator {display: inline block!important;font-size: 12px!important;position: unset!important;}
-.accountDetails-15i-_e .username{border-top: 0px;}
+#app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;}
+#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Ubuntu Mono !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important; text-align:unset !important; height:30px!important; line-height:12px!important; text-shadow: 0.5px 0.5px 2px black!important; transform: translate(0px,2px)}
+.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;}
+.accountDetails-15i-_e + div div{margin-left:unset !important;}
+.accountDetails-15i-_e .username {background-color: transparent !important;}
 /*Revert account details text — vanilla *
 #app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;}
 #app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:400 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; text-shadow: 0.5px 0.5px 2px black!important; }
@@ -1163,14 +1164,14 @@ code{
 }
 
 /*Citador Button Adjustments*/
-.replyer, .quoter, body .citar-btn{
+body .citar-btn{
     background-size: 150%!important;
     width: 3px;
     height: 8px;
     opacity: .2!important;
     transform: translate(0px,5px);
 }
-.replyer, .quoter, body .citar-btn:hover{
+body .citar-btn:hover{
     background-size: 150%!important;
     background-color: black!important;
     width: 8px;
@@ -1347,4 +1348,16 @@ code{
     -webkit-transform-style: preserve-3d;  
     -webkit-animation: animJelly 1s forwards, slide-in-right 1s forwards 12s;
     display: none;
+}
+
+/*Fixed Reactions*/
+.theme-dark .reaction.reaction-me, .theme-light .reaction.reaction-me {
+    background:var(--main-color) !important;
+}
+.message-group .reaction::before, .message-group .reaction::after {
+    border-radius: 30%;
+    visibility: hidden;
+}
+.message-group .reaction, .message-group .reaction .emoji {
+    border-radius: 50%;
 }
