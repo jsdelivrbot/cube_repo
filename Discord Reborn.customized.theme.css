@@ -1361,3 +1361,8 @@ body .citar-btn:hover{
 .message-group .reaction, .message-group .reaction .emoji {
     border-radius: 50%;
 }
+
+/*Move User Settings Side Bar*/
+.side-2nYO0F .header-1-f9X5:first-child {
+    padding-top: 31% !important;
+}
