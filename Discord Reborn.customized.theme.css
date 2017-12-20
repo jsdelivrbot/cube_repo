@@ -48,7 +48,8 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
     display: none;
 }
 [class*="scroller-"].channel-members {
-    height: 100%!important;/*
+    height: 100%!important;
+    padding-top: 8px;/*
     height: 89.8%!important;*/
 }
 .private .channelTextArea-os01xC {
@@ -56,6 +57,14 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 }
 /*Revert Bottom Left Buttons' Stupid Positioning*/
 .accountDetails-15i-_e + div div {margin-left: 0px !important;}
+
+/*roles spacing*/
+.channel-members h2{
+    padding-top: 0px !important;
+}
+[class*="scroller-"].channel-members {
+    padding-top: 8px;
+}
 
 /*Name size*
 #app-mount .accountDetails-15i-_e {
