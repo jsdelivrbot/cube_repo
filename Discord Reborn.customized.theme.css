@@ -359,9 +359,8 @@ END CUSTOM CSS FOR CATEGORIES
     margin-right:0px;
 }
 
-/*fixes weird creation date margin adjustment*/
-.creation-date-wrapper{margin-left:0px;}
-
+/*creation date adjustment*/
+.theme-dark .headerNormal-1cioxU .creationDate{transform: translateY(15px);}
 
 .container-iksrDt .accountDetails-15i-_e .username{border-top:0px!important;}
 
