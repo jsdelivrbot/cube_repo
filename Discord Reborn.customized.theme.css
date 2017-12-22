@@ -44,19 +44,13 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .accountDetails-15i-_e + div div{margin-left:unset !important;}
 .accountDetails-15i-_e .username {background-color: transparent !important;}
 /*remove bottom right corner thing*/
-.channel-members::after {
-    display: none;
-}
-[class*="scroller-"].channel-members {
-    height: 100%!important;
-    padding-top: 8px;/*
-    height: 89.8%!important;*/
-}
-.private .channelTextArea-os01xC {
-    margin: 20px 0 32px 0!important
-}
+.channel-members::after {display: none;}
+[class*="scroller-"].channel-members {height: 100%!important;padding-top: 8px;}
+.private .channelTextArea-os01xC {margin: 20px 0 32px 0!important}
 /*Revert Bottom Left Buttons' Stupid Positioning*/
 .accountDetails-15i-_e + div div {margin-left: 0px !important;}
+/*Fix Role Spacing*/
+.channel-members h2{margin-top: 22px !important;}
 
 /*roles spacing*/
 .channel-members h2{
@@ -108,6 +102,14 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::after, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::after{line-height:14px;}
 /*Remove Omni's ...icon*/
 .message-group:not(.compact) .avatar-large[style*="172218388880293888"] ~ .comment .message h2 span.username-wrapper::before, .channel-members .member .avatar-small[style*="172218388880293888"] ~ .member-inner .member-username .member-username-inner::before{display: none;}
+
+/*revert Omni's stupid shit he did to Jiiks*/
+*[style*="81388395867156480"] {background-image:url(https://avatars2.githubusercontent.com/u/1470024?s=400&v=4)!important;}
+[style*="81388395867156480"] ~ .member-inner .member-username-inner,
+[style*="81388395867156480"] ~ .comment .user-name {font-size:0px !important;}
+[style*="81388395867156480"] ~ .member-inner .member-username-inner::before,
+[style*="81388395867156480"] ~ .comment .user-name::after {content:"Jiiks";font-size:16px;}
+.message-group:not(.compact) .avatar-large[style*="81388395867156480"] ~ .comment .message h2 span.username-wrapper::after,.channel-members .member .avatar-small[style*="81388395867156480"] ~ .member-inner .member-username .member-username-inner::after{content:"";color:#fff;background:var(--main-color);border-radius:3px;margin-left:6px;font-size:10px;font-weight:600;padding:1px 2px;text-transform:uppercase;vertical-align:bottom;line-height:16px;-webkit-flex-shrink:0;flex-shrink:0;opacity:0;}
 /*
 ---------------------------------------------------------------------------------------------------------------------------------------------
 CUSTOM CSS FOR CATEGORIES
@@ -1373,4 +1375,14 @@ body .citar-btn:hover{
 /*Move User Settings Side Bar*/
 .side-2nYO0F .header-1-f9X5:first-child {
     padding-top: 31% !important;
+}
+
+.channel-members h2, .nameCollapsed-3_ChMu, .nameDefault-Lnjrwm, .nameHovered-1YFSWq{
+    font-weight: 900;
+}
+
+.channel-members h2{
+    padding-top: 0px;
+    padding-bottom: 6px;
+    margin-top: 22px;
 }
