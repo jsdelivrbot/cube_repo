@@ -50,7 +50,7 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 /*Revert Bottom Left Buttons' Stupid Positioning*/
 .accountDetails-15i-_e + div div {margin-left: 0px !important;}
 /*Fix Role Spacing*/
-.channel-members h2{margin-top: 22px !important;}
+.channel-members h2{margin-top: 24px !important;}
 
 /*roles spacing*/
 .channel-members h2{
@@ -1385,7 +1385,6 @@ body .citar-btn:hover{
 .channel-members h2{
     padding-top: 0px;
     padding-bottom: 6px;
-    margin-top: 22px;
 }
 
 /*Searchg Bar Adjustments*/
