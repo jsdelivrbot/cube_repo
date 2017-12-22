@@ -16,7 +16,7 @@ RECOMMENDATIONS: EVERY URL AT THE BOTTOM SHOULD BE THE SAME TO MAKE THE THEME MA
 --------------------------------------------------------------------------------------------------------------------------------------------
 /*Change the url in .app to change the background behind chat */
 
-/*.app, .callout-backdrop, .userPopout-4pfA0d::before { background-image: url("https://i.imgur.com/JShuhis.png") !important; background-size: cover !important;}*/
+.app, .callout-backdrop, .userPopout-4pfA0d::before { background-image: url("https://i.imgur.com/wyJTRoT.jpg") !important; background-size: cover !important;}*/
 
  /*
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -1373,16 +1373,29 @@ body .citar-btn:hover{
 }
 
 /*Move User Settings Side Bar*/
-.side-2nYO0F .header-1-f9X5:first-child {
-    padding-top: 31% !important;
+.ui-standard-sidebar-view .sidebar-region .sidebar-region-scroller{
+    padding-top: 53px !important;
 }
 
+/*Role & Category Font Weight*/
 .channel-members h2, .nameCollapsed-3_ChMu, .nameDefault-Lnjrwm, .nameHovered-1YFSWq{
     font-weight: 900;
 }
-
+/*Role Spacing*/
 .channel-members h2{
     padding-top: 0px;
     padding-bottom: 6px;
     margin-top: 22px;
+}
+
+/*Searchg Bar Adjustments*/
+.search-bar .search-bar-inner{
+    transform: translateY(1px);
+}
+.theme-dark .search .search-bar{
+    transform: translateY(2px);
+    padding: 0px 0px 30px 0px !important;
+}
+.search .search-bar{
+    height: 30px !important;
 }
