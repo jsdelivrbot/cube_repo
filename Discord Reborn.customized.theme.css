@@ -16,7 +16,7 @@ RECOMMENDATIONS: EVERY URL AT THE BOTTOM SHOULD BE THE SAME TO MAKE THE THEME MA
 --------------------------------------------------------------------------------------------------------------------------------------------
 /*Change the url in .app to change the background behind chat */
 
-.app, .callout-backdrop, .userPopout-4pfA0d::before { background-image: url("https://i.imgur.com/wyJTRoT.jpg") !important; background-size: cover !important;}*/
+.app, .callout-backdrop, .userPopout-4pfA0d::before { background-image: url("https://i.imgur.com/wyJTRoT.jpg") !important; background-size: cover !important;}
 
  /*
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -30,17 +30,17 @@ IF YOU NEED ANY HELP GO TO HTTPS://BETTERDOCS.NET
 ---------------------------------------------------------------------------------------------------------------------------------------------
 */
 body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff;background:var(--main-color);top:0px;left:50%;position:absolute;border-radius:0px;padding:5px 15px;-webkit-transform:translate(-50%, -100%);transform:translate(-50%, -100%);-webkit-animation:version 3s ease;animation:version 3s ease;-webkit-animation-delay:4s;animation-delay:4s;}
-
+.ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before, .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .ui-form-title.h2::after {display:none !important}
 /*Revert account details text in bottom left*/
-#app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;}
+#app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;transform: translateY(-25px) !important;}
 #app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Ubuntu !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important; text-align:unset !important; height:30px!important; line-height:12px!important; text-shadow: 0.5px 0.5px 2px black!important; transform: translate(0px,2px)}
-.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;}
+.accountDetails-15i-_e .discriminator {display: inline-block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;transform: translate(-94px, 14px) !important;margin-bottom: 20px;}
 .accountDetails-15i-_e + div div{margin-left:unset !important;}
 .accountDetails-15i-_e .username {background-color: transparent !important;}
 /*Revert account details text — vanilla *
-#app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;}
-#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:400 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; text-shadow: 0.5px 0.5px 2px black!important; }
-.accountDetails-15i-_e .discriminator {display: inline block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;}
+#app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;transform: translateY(-25px) !important;}
+#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:700 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; text-shadow: 0.5px 0.5px 2px black!important; }
+.accountDetails-15i-_e .discriminator {display: inline-block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;transform: translate(-94px, 14px) !important;margin-bottom: 20px;}
 .accountDetails-15i-_e + div div{margin-left:unset !important;}
 .accountDetails-15i-_e .username {background-color: transparent !important;}
 /*remove bottom right corner thing*/
@@ -365,6 +365,17 @@ END CUSTOM CSS FOR CATEGORIES
 .theme-dark .headerNormal-1cioxU .creationDate{transform: translateY(15px);}
 
 .container-iksrDt .accountDetails-15i-_e .username{border-top:0px!important;}
+
+
+/*WARNING: This will cause "New Messages" and Auto Scrolling issues!*
+.content.flex-spacer.flex-horizontal .message-group{background-color: rgba(0, 0, 0, 0.4) !important;margin-top: 12px;border-radius: 0px;}
+.content.flex-spacer.flex-horizontal .messages{padding-bottom: 9px;}
+.chat .divider.divider-red{padding-top: 13px;}
+.chat .divider{margin-bottom: -14px;}
+.theme-dark .friends-table .messages .divider:not(.red) span{padding-top: 20px;}
+.content.flex-spacer.flex-horizontal .message-group:not(.compact) h2{display: flex;position: relative;margin-top: -10px;background: rgba(0, 0, 0, 0.0) !important;width: 135%;left: -68px;padding: 1px 0px 2px 7px;}
+.content.flex-spacer.flex-horizontal .message-group .avatar-large{margin-top: 20px;margin-left: 7px;}
+.content.flex-spacer.flex-horizontal .message-group .comment .markup{margin-top: 2px;}
 
 
 /*Quiet Title Bar Revert
@@ -924,7 +935,7 @@ div[class*="titleBar-"]:after{height:2px!important;background-color: var(--main-
 
 
 
-/*only works for Nitro users that have a GIF avatar*/
+/*only works for Nitro users that have a GIF avatar*
 .message-group:not(.compact) .avatar-large[style*="/a_"] ~ .comment .body h2:before{content:"nitro";position:relative;margin:0 0 0 5px;padding:3px 4px 2px 3px;color:#fff;font-size:10px;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);text-transform:uppercase;background-color: #7289DA;font-weight: 600;border-radius:3px;order:2;height:100%;top: 4px !important;}
 
 
@@ -1398,3 +1409,9 @@ body .citar-btn:hover{
 .search .search-bar{
     height: 30px !important;
 }
+
+.upload-modal .bf-toolbar {background: var(--main-color) !important;}
+.theme-dark .upload-modal .inner-3if5cm {background-color: rgba(0, 0, 0, 0.3) !important;}
+
+/*background color*/
+.theme-dark .channels-wrap, .theme-dark .activityFeed-HeiGwL, #friends  .headerBar-cxbhPD, .theme-dark .lfg-3xoFkI, .app .guilds .guild.active:first-child, .theme-dark .guilds-wrapper, .headerPlaying-2eYqm9, .userPopout-4pfA0d .headerNormal-1cioxU, .userPopout-4pfA0d .body-3rkFrF, .userPopout-4pfA0d .footer-2J5zqP, .headerStreaming-3F-wjT, .theme-dark .title-wrap, .theme-dark .channel-members, .theme-dark .private-channel-call,.theme-dark .content .flex-spacer, .theme-dark .friends-table, .theme-dark .friends-header, .channels-3g2vYe, #app-mount .titleWrapper-3Vi_wz, .app .guilds .guild:first-child, .theme-dark .channel-members::after {background: rgba(0, 0, 0, 0.7) !important;}
