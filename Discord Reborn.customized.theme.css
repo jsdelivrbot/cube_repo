@@ -33,14 +33,14 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .bda-slist::before, .ui-standard-sidebar-view #bd-settingspane-container .content-column.default .ui-form-title.h2::after {display:none !important}
 /*Revert account details text in bottom left*/
 #app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;transform: translateY(-25px) !important;}
-#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Ubuntu !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important; text-align:unset !important; height:30px!important; line-height:12px!important; text-shadow: 0.5px 0.5px 2px black!important; transform: translate(0px,2px)}
-.accountDetails-15i-_e .discriminator {display: inline-block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;transform: translate(-94px, 14px) !important;margin-bottom: 20px;}
+#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Calamity !important;font-size:15px !important;font-weight:900 !important;color: var(--main-color) !important; text-align:unset !important; height:30px!important; line-height:12px!important; text-shadow: 0.5px 0.5px 2px black!important; transform: translate(0px,56px)}
+.accountDetails-15i-_e .discriminator {display: inline-block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;transform: translate(0px, 40px) !important;margin-bottom: 42px;}
 .accountDetails-15i-_e + div div{margin-left:unset !important;}
 .accountDetails-15i-_e .username {background-color: transparent !important;}
 /*Revert account details text — vanilla *
 #app-mount .accountDetails-15i-_e {position:unset !important; min-width:unset !important;bottom:0px !important;height: unset !important;transform: translateY(-25px) !important;}
-#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:700 !important; color:white !important; text-align:unset !important; height:30px!important; line-height:10px!important; text-shadow: 0.5px 0.5px 2px black!important; }
-.accountDetails-15i-_e .discriminator {display: inline-block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;transform: translate(-94px, 14px) !important;margin-bottom: 20px;}
+#app-mount .accountDetails-15i-_e .username { margin-left: unset !important; border: none !important; font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important; font-size:15px !important; font-weight:700 !important; color:var(--main-color) !important; text-align:unset !important; height:30px!important; line-height:10px!important; text-shadow: 0.5px 0.5px 2px black!important;  transform: translate(0px,56px)}
+.accountDetails-15i-_e .discriminator {display: inline-block !important; font-size: 12px !important;text-shadow: 0.5px 0.5px 2px black!important; position: unset !important;transform: translate(0px, 36px) !important;margin-bottom: 40px;}
 .accountDetails-15i-_e + div div{margin-left:unset !important;}
 .accountDetails-15i-_e .username {background-color: transparent !important;}
 /*remove bottom right corner thing*/
@@ -510,12 +510,30 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
     background-color: var(--main-color);
 }
 
-/*Squared off stuff*/
+/*square all the things*/
 *::-webkit-scrollbar-thumb, *::-webkit-scrollbar-track-piece {
     border-radius: 0 !important;
 }
 *{border-radius:0!important}
 *::after, *::before, * {border-radius: 0 !important;}
+
+/*Calamity Sans all the things*/
+* {
+    font-family: 'Calamity' !important;
+}
+.name-3gtcmp{
+    font-size: 100% !important;
+}
+.nameTag-26T3kW{
+    font-size: 96% !important;
+}
+.channel-members h2, .iconHoveredCollapsed-jNYgOD, .iconHovered-3PRzOR, .nameCollapsed-3_ChMu, .nameDefault-Lnjrwm{
+    font-size: 70% !important;
+}
+.private-channels .channel .channel-activity-text{
+    height: 14px !important;
+    transform: translateY(2px) !important;
+}
 
 
 /*Profile Roles*/
@@ -575,7 +593,6 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 .guilds-wrapper .guilds{
     padding: 2px 0px 200px 15px !important
 }
-.guilds-wrapper .guilds-add{transform:translateX(1px);}
 
 
 
@@ -588,19 +605,23 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 }
 #friends .friends-table .friends-table-body{
     margin: 0px 0 0;
-    height: calc(100% - 90px);
+    height: calc(100% - 92px);
 }
 
-#friends .friends-table .friends-row{background:rgba(0, 0, 0, 0.2)!important;box-shadow:1px 1px 20px rgba(0, 0, 0, 0.25);border-radius:5px;transition:opacity 1000ms;}
+/*#friends .friends-table .friends-row{background:rgba(0, 0, 0, 0.2)!important;box-shadow:1px 1px 20px rgba(0, 0, 0, 0.25);border-radius:5px;transition:opacity 1000ms;}*/
+#friends .friends-table .friends-row{background:rgba(0, 0, 0, 0)!important;box-shadow:1px 1px 20px rgba(0, 0, 0, 0);border-radius:5px;transition:opacity 1000ms;}
 #friends .friends-table .friends-row .avatar-small{box-shadow:1px 1px 2px rgba(0, 0, 0, 0);}
 #friends .friends-table .friends-row:hover .friends-column-name .avatar-small{opacity:0.9;transform: scale(1) perspective(1px);box-shadow: 1px 1px 8px 1px transparent;}
 
 #friends .friends-table .friends-table-body::after{
-    border-top: 0px;
+    border-top: 0px !important;
     width: 2000px;
 }
 .theme-dark #friends .friends-table .friends-table-body::after{
     background: rgba(0,0,0,0.2);
+}
+.theme-dark #friends .friends-table .friends-row+.friends-row{
+    border-top: 0px !important;
 }
 
 /*Activity bottom bar*/
@@ -682,7 +703,10 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 /*Change Colour of Status Picker's Online to Main Colour — cube_guy*/
 .status-picker .popout-menu-item:nth-child(1){background-color: var(--main-color)!important;}.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text:after{color:var(--main-color);}.status-picker .popout-menu-item:hover:nth-of-type(1) > .status-icon-text > .status-text{background:var(--main-color);}
 
-
+/*Change Status Picker Online Colour to Main Main Colour*/
+.menu-3BZuDT .status-online{
+    background-color: var(--main-color);
+}
 
 .guild-channels{background-color:#131313 !important;}
 
@@ -919,6 +943,8 @@ display:none !important;}
 div[class*="titleBar-"]:after{height:0px!important;}
 
 .typeWindows-15E0Ys::after{background-image: url();}
+
+div[class*="titleBar-"]:before{height: 0px !important;}
 
 /*Makes it into a 2px blue line to match the one below the title bar*/
 div[class*="titleBar-"]:after{height:2px!important;background-color: var(--main-color) !important;}
@@ -1225,9 +1251,13 @@ body .citar-btn:hover{
     box-shadow: 0px 0px 0px 0px !important;
 }
 
-.private-channels .channel .avatar-small[style*="397144059489288214"]{
+
+/*remove shadow on my server icon in mutual servers*/
+.avatar-small[style*="131903548429565953"]{
     box-shadow: 0px 0px 0px 0px !important;
 }
+
+
 /*cube_guy's Triforce Tag*
 .message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::before{
     content: "`";
@@ -1238,6 +1268,34 @@ body .citar-btn:hover{
     width: 0px;
     left: -3px;
     padding: 0px 10px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    line-height: 16px !important;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+    position: relative;
+    margin-left: -28px;
+}
+.message-group .avatar-large[style*="131903461771051009"]{
+    box-shadow: 0px 0px 0px 0px !important;
+}
+.message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 .timestamp {
+    margin-left: 4px;
+}
+.chat .avatar-large[style*="131903461771051009"] ~ .comment .message h2 {
+    transform: translateX(30px);
+}
+
+/*cube_guy's Triforce Tag*/
+.message-group:not(.compact) .avatar-large[style*="131903461771051009"] ~ .comment .message h2 span.username-wrapper::before{
+    content: "`";
+    background-image: url(https://rawgit.com/cubeguy/cube_repo/master/icons/Discord_Tag.gif);
+    background-size: 25px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    width: 0px;
+    left: -3px;
+    padding: 2px 10px;
     text-transform: uppercase;
     vertical-align: bottom;
     line-height: 16px !important;
@@ -1530,3 +1588,36 @@ body .citar-btn:hover{
 #friends .friends-table .friends-row .friends-column-name .discord-tag .username{
     width: 200%;
 }
+
+/*hopefully temporary friends list fixes*/
+#friends .friends-table .friends-row{
+    width: 100% !important;
+    margin-right: 0px !important;
+}
+#friends .friends-table .friends-row .friends-column-name{
+    margin-left: 12px !important;
+}
+#friends .friends-table .friends-column-name{
+    margin-left: 52px !important;
+}
+
+.theme-dark #friends .friends-table .friends-row .friends-column-status, .theme-dark #friends .friends-table .friends-row .friends-column-guilds{
+    margin-left: 62px !important;
+}
+
+#app-mount .guilds .guild.guilds-add {
+    position: relative !important;
+    left: 0px;
+    margin-top: 24px !important;
+}
+
+
+
+
+/*Revert Izy's stupid, selfish embed changes*/
+.embedInner-t4ag7g{border: 0 !important;}
+.embedInner-t4ag7g{padding: 8px 10px !important;}
+.marginTop8-2gOa2N{margin-top: 8px !important;}
+.marginTop4-2rEBfJ{margin-top: 4px !important;}
+.embedTitleLink-1IGDvg{display: initial !important;}
+.embedProviderLink-2k6W5T{display: initial !important;}
