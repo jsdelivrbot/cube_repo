@@ -1034,8 +1034,18 @@ div[class*="titleBar-"]:after{height:2px!important;background-color: var(--main-
 /**/
 
 
-/*Change Online Color to Main Color — cube_guy*/
+/*Change Online Color to Main Color — cube_guy
 .status-online{border:4px solid var(--main-color)!important;}.channel-members .avatar-small .status-online, .private-channels .avatar-small .status-online, .account .avatar-small .status-online{border:2px solid var(--main-color)!important;}.friends-column.friends-column-status > .status-online{background-color:var(--main-color)!important;}.statusOnline-1Mp2_H{border-color:var(--main-color)!important;}.statusOnlineProfile-2tnPUH{box-shadow:inset 0 0 0 3px var(--main-color)!important;}.title > .status-online, [class*=titleText-] > .status-online{background:var(--main-color)!important;}
+/**/
+.statusOnline-1Mp2_H, #app-mount .channel-members .avatar-small .status-online, #app-mount .private-channels .avatar-small .status-online, #app-mount .guilds-wrapper + div [class*='channels-'] .avatar-small .status-online, #app-mount .account .avatar-small .status-online{
+    border: solid var(--main-color) 2px !important;
+}
+.friends-column.friends-column-status > .status-online{
+    background-color: var(--main-color) !important;
+}
+.title > .status-online, [class*=titleText-] > .status-online{
+    background: var(--main-color) !important;
+}
 
 
 
@@ -1600,17 +1610,27 @@ body .citar-btn:hover{
 #friends .friends-table .friends-column-name{
     margin-left: 52px !important;
 }
-
+/*
 .theme-dark #friends .friends-table .friends-row .friends-column-status, .theme-dark #friends .friends-table .friends-row .friends-column-guilds{
     margin-left: 62px !important;
 }
-
+*/
 #app-mount .guilds .guild.guilds-add {
     position: relative !important;
     left: 0px;
     margin-top: 24px !important;
 }
+/*remove friend action button*/
+#friends .friends-table .friends-row .friends-column-actions{
+    display: none !important;
+}
 
+
+
+/*restore 4/5th mutual servers*/
+#friends .friends-table .friends-row .friends-column-guilds a:nth-child(4), #friends .friends-table .friends-row .friends-column-guilds a:nth-child(4) .avatar-small, #friends .friends-table .friends-row .friends-column-guilds a:nth-child(5), #friends .friends-table .friends-row .friends-column-guilds a:nth-child(5) .avatar-small, #friends .friends-table .friends-row .friends-column-guilds a:nth-child(n + 6){
+    display: inherit !important;
+}
 
 
 
@@ -1621,3 +1641,18 @@ body .citar-btn:hover{
 .marginTop4-2rEBfJ{margin-top: 4px !important;}
 .embedTitleLink-1IGDvg{display: initial !important;}
 .embedProviderLink-2k6W5T{display: initial !important;}
+
+
+.callAvatarBorder-OF5XZJ.voice-3qolcc.speaking-dRlv0T{
+    box-shadow: inset 0 0 0 3px var(--main-color) !important;
+}
+
+
+/*context menus
+.theme-dark .item-1XYaYf {
+    color: var(--main-color) !important;
+}
+/**/
+.theme-dark.contextMenu-uoJTbz {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+}
