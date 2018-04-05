@@ -1,24 +1,27 @@
 /* IMPORT CSS FROM GITHUB */
-@import url("https://cdn.rawgit.com/0mniscient/Discord-Themes/master/css/Discord%20Reborn.css");
+@import url("https://rawgit.com/squee666/Discord-Themes/master/css/Discord%20Reborn.css");
 /*
 ===== IMPORTANT =====
 CHANGE DISCORDS THEME TO DARK THEME IN APPEARANCE SETTINGS FOR THIS THEME TO WORK!
 ===== CUSTOMIZABLE COLORS =====
-*
+*/
 :root { 
 	--main-color: #0064B4;
 	--hover-color: #0064B4;
- }
+    --RB: rgba(0, 0, 0, 0.7) !important;
+    --BG: url("https://i.imgur.com/mVRS6ss.png") !important;
+    --br: 0% !important;
+}
  /*
 ===== CUSTOMIZABLE IMAGES =====
 IMPORTANT: EVERY URL MUST BE HTTPS:// IN ORDER TO WORK IN DISCORD
 RECOMMENDATIONS: EVERY URL AT THE BOTTOM SHOULD BE THE SAME TO MAKE THE THEME MATCH. (YOUR CHOICE)
 --------------------------------------------------------------------------------------------------------------------------------------------
 /*Change the url in .app to change the background behind chat */
+/*
+.app, .callout-backdrop, .userPopout-4pfA0d::before, .topSectionPlaying-3jAH9b, .topSectionNormal-2LlRG1 { background-image: url("https://i.imgur.com/mVRS6ss.png") !important; background-size: cover !important;}
 
-.app, .callout-backdrop, .userPopout-4pfA0d::before { background-image: url("https://i.imgur.com/wyJTRoT.jpg") !important; background-size: cover !important;}
-
- /*
+/*
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ===== CREDITS =====
 URI
@@ -85,11 +88,17 @@ body:before{content:"Thanks for using "var(--theme-name)"!";z-index:0;color:#fff
 
 .theme-dark .inner-3if5cm{
     border-top: 0px !important;
-    padding-top: 15px !important;
+    /*padding-top: 15px !important;*/
 }
 .theme-dark .chat form{
     border-left: 0px !important;
     border-right: 0px !important;
+    box-shadow: 0 0px 0 transparent !important;
+}
+/*
+#app-mount .titleWrapper-3Vi_wz > div, .headerBar-cxbhPD{
+    border-bottom: 2px var(--main-color) solid !important;
+    height: 46px !important;
 }
 
 /*Daniel's tag  USER ID — 128948605263413248*/
@@ -517,6 +526,15 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 *{border-radius:0!important}
 *::after, *::before, * {border-radius: 0 !important;}
 
+
+/*Sheikah Server/Channel Name*
+.name-3gtcmp{
+    font-family: 'Sheikah Sheikah Writing' !important;
+    transform: translateY(1px) !important;
+}
+.channelName-1G03vu{
+    font-family: 'Sheikah Sheikah Writing' !important;
+}
 /*Calamity Sans all the things*/
 * {
     font-family: 'Calamity' !important;
@@ -660,7 +678,7 @@ form .bf-toolbar{transform: translate(-3px,-45px) !important;}
 
 
 
-/*Status Picker*/
+/*Status Picker*
 .status-picker.popout-menu{left:76px!important;width:220px !important;height:64px !important;border-right: 0px solid transparent !important;border-top: 0px solid transparent !important;border-left: 0px solid transparent !important;background: rgba(0,0,0,0.4) !important;transform: translate(0px, 0px);}
 
 .status-picker .popout-menu-item:hover:nth-of-type(5) > .status-icon-text > .status-text {
@@ -858,7 +876,7 @@ div.innerEnabled-gLHeOL.inner-3if5cm.flex-3B1TI4.innerNoAutocomplete-kaUXJZ {
 }
 
 
-/*User Pppout*/
+/*User Pppout*
 .userPopout-4pfA0d .headerNormal-1cioxU {background:rgba(0, 0, 0, 0.65)!important;background-image: url()!important;background-size: auto !important;}
 .headerStreaming-3F-wjT {background:rgba(0, 0, 0, 0.65)!important;background-image: url()!important;background-size: auto !important;}
 .headerLive-2dDMvp {border:1px solid rgb(89, 54, 149)!important;}
@@ -947,7 +965,7 @@ div[class*="titleBar-"]:after{height:0px!important;}
 div[class*="titleBar-"]:before{height: 0px !important;}
 
 /*Makes it into a 2px blue line to match the one below the title bar*/
-div[class*="titleBar-"]:after{height:2px!important;background-color: var(--main-color) !important;}
+div[class*="titleBar-"]:after{height:3px!important;background-color: var(--main-color) !important;}
 
 /*adjust guild margin*/
 .app .guilds .guild:first-child {margin-top: 2px!important;padding-bottom:0px !important}
@@ -1081,7 +1099,7 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 #friends .friends-table .friends-row .friends-column-status .status{border-radius:0px 0px 0px 0px!important;}#friends .friends-table .friends-row{border-radius:0px!important;}
 .avatar-small .status{border-radius:0px!important;}.userPopout-4pfA0d .status-3jUEha{border-radius:0px;}.user-popout .avatar-wrapper .avatar-popout .status, .avatar-popout, #user-profile-modal .avatar-wrapper .avatar-profile{border-radius:0px!important;}#user-profile-modal .avatar-wrapper .avatar-profile .status{border-radius:0px;}
 
-#friends .friends-table .friends-row .friends-column-status .status-text{color:rgba(255,255,255,0.8);transform:translateY(1px);}
+#friends .friends-table .friends-row .friends-column-status .status-text{color:rgba(255,255,255,0.8);transform:translateY(1px);max-width: 100% !important;}
 
 
 .channel-members .avatar-small .status, .private-channels .avatar-small .status, .account .avatar-small .status{box-shadow:0 0 0;}
@@ -1147,10 +1165,9 @@ div.avatar-large{border-radius:0px;}.avatar-small{border-radius:0px;}#friends .f
 
 
 /*Fixes Status Everywhere plugin compatibility for Quiet and Discord Reborn — cube_guy*
-.message-group .avatar-large{margin-left:3px;}
-/*Status Everywhere plugin, squared off corners — cube_guy*
-.avatar-large .status{border-radius:0px;}
-*/
+.message-group .avatar-large{margin-left:2px;}
+.avatar-large .status{border-width: 2px !important; right: -2px !important; top: -2px !important;}
+.status-online{border: 4px solid var(--main-color) !important;}
 
 /*Quiet & Discord Reborn — Check for Updates Button Position Fix — cube_guy*/
 .bd-updatebtn{transform:translate(-10px,-132.5px);}
@@ -1340,17 +1357,14 @@ body .citar-btn:hover{
 .feed-2fHzeU {
     height: calc(100% - 20px) !important;
 }
+
+
+
 /*Title Bar Spacing Fix*/
-#app-mount .titleWrapper-3Vi_wz > div{
-    margin-right: 90px !important;
-}
-#friends > .headerBar-cxbhPD{
-    margin-right: -50px !important;
-}
-#friends > .headerBar-cxbhPD::after{
+#app-mount .titleWrapper-3Vi_wz > div::after{
     content: "";
     background: rgba(0,0,0,0.75);
-    width: 140px;
+    width: 90px;
     height: 48px;
     bottom: 0px;
     position: relative;
@@ -1655,4 +1669,50 @@ body .citar-btn:hover{
 /**/
 .theme-dark.contextMenu-uoJTbz {
     background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/*EditUsers user tags (and bot tags)*/
+.user-tag, .channel-members .botTag-1OwMgs, .botTagRegular-288-ZL{
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 13px;
+    margin-left: 6px;
+    padding: 1px 2px;
+    text-transform: uppercase;
+    vertical-align: top;
+    padding: 1px 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;
+}
+.botTagInvert-gorWR_{
+    display: inline-block;
+    flex-shrink: 0;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 13px;
+    margin-left: 6px;
+    padding: 1px 2px;
+    text-transform: uppercase;
+    vertical-align: top;
+    padding: 1px 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+    text-shadow: rgba(0,0,0,0.4) 1px 1px 1px;
+}
+.channel-members .user-tag{
+    height: 14px;
+    line-height: 15px;
 }
